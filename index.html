@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Біздің шаңырақ — 4 «В»</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Onest:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Ақ киіз үй: аппақ градиент, алтын ою. Бір түсті: ақ + алтын, жарық, сәулелі */
+  --w:#FFFFFF; --ivory:#FFFBF2; --cream:#FBF3E0; --g1:#F6E7B8; --g2:#E8C96A; --g3:#C99A2E; --g4:#9A7215;
+  --ink:#3B2C0F; --muted:#8A7444;
+  --gold:linear-gradient(135deg,#F7DC8A 0%,#D9A93A 35%,#A8770F 62%,#E3BA55 100%);
+  --display:"Unbounded","Arial Black",sans-serif; --body:"Onest","Segoe UI",Arial,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;
+  background:radial-gradient(70vw 50vw at 50% -10%,#FFFFFF 0%,#FFF8E6 55%,#FBF0D6 100%) fixed}
+h1,h2,h3{font-family:var(--display);margin:0;text-wrap:balance;font-weight:600}
+.wrap{max-width:1120px;margin:0 auto;padding:0 18px}
+.goldtxt{background:var(--gold);-webkit-background-clip:text;background-clip:text;color:transparent}
+/* ornament strip */
+.orn{height:30px;background:
+ url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='30'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1'%3E%3Cstop offset='0' stop-color='%23E8C96A'/%3E%3Cstop offset='.5' stop-color='%23C99A2E'/%3E%3Cstop offset='1' stop-color='%23E8C96A'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M30 26c-8 0-12-6-12-11s4-9 8-9 5 3 5 5-2 4-4 4M30 26c8 0 12-6 12-11s-4-9-8-9-5 3-5 5 2 4 4 4M2 15h12M46 15h12' fill='none' stroke='url(%23g)' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E") repeat-x center}
+/* HERO */
+.hero{position:relative;text-align:center;padding:26px 0 10px;overflow:hidden;background:radial-gradient(60% 70% at 50% 60%,#FFFFFF 0%,#FFF6DD 60%,#F7E7BC 100%)}
+.hero::before{content:"";position:absolute;inset:-20% -10% auto;height:120%;background:radial-gradient(closest-side,rgba(255,236,170,.55),transparent);pointer-events:none}
+.badge{display:inline-flex;gap:8px;align-items:center;font-family:var(--display);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--g4);background:#fff;border:1px solid var(--g1);border-radius:999px;padding:7px 16px;box-shadow:0 6px 18px -10px var(--g3)}
+.hero h1{font-size:clamp(38px,6.6vw,78px);font-weight:800;line-height:1.02;margin:14px 0 6px;color:var(--ink)}
+.hero .sub{max-width:720px;margin:0 auto;color:#5d4a20;font-size:clamp(16px,1.6vw,19px)}
+.yurt{width:100%;max-width:940px;height:auto;display:block;margin:6px auto 0}
+.yurt .hot{cursor:pointer;transition:filter .25s}
+.yurt .hot:hover,.yurt .hot:focus{filter:drop-shadow(0 0 14px rgba(232,201,106,1));outline:none}
+.yurt text{font-family:var(--display);font-size:15px;fill:#7A5408;font-weight:600;pointer-events:none;letter-spacing:.06em}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;padding:14px 0 26px}
+.chips a{text-decoration:none;color:var(--ink);font-weight:700;font-size:14px;padding:8px 14px;border-radius:999px;background:#fff;border:1.5px solid var(--g1);box-shadow:0 4px 12px -8px var(--g3)}
+.chips a:hover,.chips a:focus-visible{background:var(--gold);border-color:var(--g2);outline:none}
+.sparkle{position:absolute;width:6px;height:6px;border-radius:50%;background:#fff;box-shadow:0 0 12px 4px #F6E2A0;animation:tw 3s ease-in-out infinite}
+@keyframes tw{0%,100%{opacity:.2;transform:scale(.6)}50%{opacity:1;transform:scale(1.2)}}
+/* sections */
+section{margin:26px auto;max-width:1120px;padding:34px 30px;border-radius:34px;position:relative;
+  background:linear-gradient(160deg,#FFFFFF 0%,#FFFBF1 70%,#FBF1D9 100%);border:1px solid rgba(201,154,46,.25);box-shadow:0 30px 60px -40px rgba(150,110,20,.55)}
+@media (max-width:1160px){section{margin:20px 14px}}
+section::before{content:"";position:absolute;left:26px;right:26px;top:0;height:3px;border-radius:3px;background:var(--gold)}
+.head{display:flex;gap:16px;align-items:center;margin-bottom:16px;flex-wrap:wrap}
+.medal{width:64px;height:64px;flex:none;border-radius:50%;background:var(--gold);display:grid;place-items:center;box-shadow:inset 0 2px 6px rgba(255,255,255,.8),0 8px 18px -8px var(--g3)}
+.medal svg{width:38px;height:38px}
+.kick{font-family:var(--display);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--g3)}
+.head h2{font-size:clamp(22px,3vw,34px);color:var(--ink)}
+.lead{color:var(--muted);margin:0 0 18px;max-width:760px}
+.card{background:#fff;border-radius:22px;padding:16px;border:1px solid rgba(201,154,46,.22);box-shadow:0 14px 26px -22px rgba(150,110,20,.7)}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:820px){.two{grid-template-columns:1fr}}
+.pill{display:inline-block;font-size:12.5px;font-weight:700;border-radius:999px;padding:3px 10px;background:#FFF5D6;color:var(--g4);border:1px solid var(--g1)}
+.btn{font:700 16px var(--body);border:0;border-radius:999px;padding:12px 20px;cursor:pointer;color:var(--ink);background:var(--gold);box-shadow:0 8px 18px -10px var(--g3),inset 0 1px 0 rgba(255,255,255,.7)}
+.btn.ghost{background:#fff;border:1.5px solid var(--g2);box-shadow:none}
+.btn:focus-visible{outline:3px solid var(--g3);outline-offset:3px}
+.ex{font-size:12.5px;color:#A88E57;font-style:italic}
+/* shanyraq top view */
+.top{display:grid;grid-template-columns:1.1fr 1fr;gap:20px;align-items:center}
+@media (max-width:880px){.top{grid-template-columns:1fr}}
+.top svg{width:100%;height:auto}
+.top .ray{cursor:pointer;outline:none}
+.top .ray:focus-visible line{stroke:#9A6B0C;stroke-width:8}
+.top .ray text{font-family:var(--body);font-size:12px;fill:var(--ink);font-weight:700}
+.top .ray:hover line,.top .ray.on line{stroke:#C99A2E;stroke-width:7}
+.top .ray:hover circle,.top .ray.on circle{fill:#C99A2E}
+.kid{min-height:200px;display:flex;flex-direction:column;gap:8px;justify-content:center}
+.kid .nm{font-family:var(--display);font-size:28px}
+/* tools */
+.wheel{display:grid;place-items:center;gap:14px;text-align:center}
+.bigname{font-family:var(--display);font-size:clamp(28px,4vw,44px);min-height:60px}
+.groups{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;margin-top:12px}
+.groups .card h3{font-size:15px;margin-bottom:6px}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid #F1E4C3}
+th{font-family:var(--display);font-weight:600;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--g3)}
+.tw{overflow-x:auto}
+.month{background:#FFFDF6;border:1px solid var(--g1);border-radius:16px;padding:10px 12px}
+.month b{color:var(--g3)}
+.month.now{background:var(--gold)}
+.month.now div{color:#3B2C0F}
+.month.now b{color:var(--ink)}
+details{background:#fff;border:1px solid rgba(201,154,46,.25);border-radius:18px;padding:12px 16px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:700}
+.q{font-family:var(--display);font-size:clamp(18px,2.2vw,24px);margin:6px 0 12px}
+.res{min-height:48px;margin-top:12px;padding:10px 14px;border-radius:14px;background:#FFFDF6;border:1px solid var(--g1)}
+.res.ok{background:#FFF3C4}.res.no{background:#FBE9E3}
+.treebox{position:relative;border-radius:24px;overflow:hidden;background:linear-gradient(#FFFFFF,#FFF5DC)}
+.treebox canvas{display:block;width:100%;height:340px}
+.cnt{position:absolute;left:14px;top:12px;background:#fff;border:1px solid var(--g1);border-radius:14px;padding:6px 12px;font-weight:700}
+.note{background:#FFF5D6;border-radius:14px;padding:10px 14px;font-size:15px;border:1px solid var(--g1)}
+footer{text-align:center;color:var(--muted);font-size:14px;padding:20px 0 40px}
+
+/* ===== ЖАРҚЫН ТҮСТЕР + КАБИНЕТТЕР ===== */
+body{background:radial-gradient(40vw 30vw at 8% 10%,rgba(0,184,217,.16),transparent 70%),radial-gradient(40vw 30vw at 92% 14%,rgba(255,62,165,.14),transparent 70%),radial-gradient(50vw 40vw at 85% 90%,rgba(139,92,246,.12),transparent 70%),radial-gradient(50vw 40vw at 10% 90%,rgba(34,197,94,.12),transparent 70%),radial-gradient(70vw 50vw at 50% -10%,#FFFFFF 0%,#FFF8E6 55%,#FBF0D6 100%) fixed}
+.hero{background:radial-gradient(60% 70% at 50% 60%,#FFFFFF 0%,#FFF8E6 60%,rgba(255,240,205,.6) 100%)}
+.hero h1 .rb{background:linear-gradient(90deg,#FF4D5E,#FF7A00,#F5A300,#10B981,#00B8D9,#8B5CF6,#FF3EA5);-webkit-background-clip:text;background-clip:text;color:transparent}
+main{display:block}
+section.room{display:none}
+section.room.open{display:block;position:fixed;inset:0;z-index:50;margin:0;max-width:none;border-radius:0;border:0;overflow-y:auto;overscroll-behavior:contain;
+ padding:96px max(18px,calc(50vw - 540px)) 60px;
+ background:radial-gradient(60vw 40vw at 100% 0%,color-mix(in srgb,var(--c) 16%,transparent),transparent 70%),radial-gradient(50vw 40vw at 0% 100%,color-mix(in srgb,var(--c2) 13%,transparent),transparent 70%),linear-gradient(160deg,#FFFFFF,#FFFBF1);
+ animation:openroom .55s cubic-bezier(.2,.8,.2,1) both}
+@keyframes openroom{from{clip-path:circle(0 at var(--ox,50%) var(--oy,50%))}to{clip-path:circle(150% at var(--ox,50%) var(--oy,50%))}}
+section.room.open > *{animation:rise .5s .15s both}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+section.room::before{background:linear-gradient(90deg,var(--c),var(--c2))}
+section.room.open::before{display:none}
+.room .medal{background:linear-gradient(135deg,var(--c),var(--c2));box-shadow:inset 0 2px 6px rgba(255,255,255,.6),0 10px 22px -8px var(--c)}
+.room .kick{color:var(--c)}
+.room .pill{background:color-mix(in srgb,var(--c) 12%,#fff);color:color-mix(in srgb,var(--c) 75%,#000);border-color:color-mix(in srgb,var(--c) 30%,#fff)}
+.room .btn{background:linear-gradient(135deg,var(--c),var(--c2));color:#fff;box-shadow:0 10px 20px -10px var(--c)}
+.room .btn.ghost{background:#fff;color:var(--ink);border-color:var(--c)}
+.room .card{border-color:color-mix(in srgb,var(--c) 22%,#fff);border-top:4px solid var(--c);box-shadow:0 16px 28px -22px var(--c)}
+.room .card:nth-child(3n+2){border-top-color:var(--c2)}
+.room .card:nth-child(3n){border-top-color:#F5A300}
+.room .goldtxt{background-image:linear-gradient(135deg,var(--c),var(--c2))}
+.room .month{border-color:color-mix(in srgb,var(--c) 25%,#fff)}
+.room .month b{color:var(--c)}
+.room .month.now{background:linear-gradient(135deg,var(--c),var(--c2))}
+.room .month.now b,.room .month.now div{color:#fff}
+.room .note{background:color-mix(in srgb,var(--c) 10%,#fff);border-color:color-mix(in srgb,var(--c) 30%,#fff)}
+.room th{color:var(--c)}
+.room .res.ok{background:#DDF7EA}
+/* room bar */
+#bar{position:fixed;left:0;right:0;top:0;z-index:60;display:none;align-items:center;gap:10px;padding:12px max(14px,calc(50vw - 540px));
+ background:rgba(255,255,255,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:3px solid var(--c,#D9A93A)}
+#bar.on{display:flex}
+#bar .home{display:inline-flex;align-items:center;gap:8px;font:700 15px var(--body);border:0;border-radius:999px;padding:10px 16px;cursor:pointer;color:#fff;background:linear-gradient(135deg,var(--c),var(--c2))}
+#bar .ttl{flex:1;font-family:var(--display);font-size:15px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#bar .ttl small{display:block;font-family:var(--body);font-size:12px;color:var(--muted);font-weight:500}
+#bar .nx{width:42px;height:42px;border-radius:50%;border:2px solid var(--c);background:#fff;font-size:18px;cursor:pointer;color:var(--c);font-weight:800}
+#bar button:focus-visible{outline:3px solid var(--c);outline-offset:2px}
+body.inroom{overflow:hidden}
+/* doors grid */
+.doors{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;padding:16px 0 30px;max-width:980px;margin:0 auto}
+.door{all:unset;cursor:pointer;position:relative;display:flex;flex-direction:column;gap:4px;padding:16px 14px 14px;border-radius:22px;color:#fff;text-align:left;
+ background:linear-gradient(135deg,var(--c),var(--c2));box-shadow:0 14px 26px -14px var(--c);transition:transform .2s;overflow:hidden}
+.door::after{content:"";position:absolute;right:-18px;bottom:-18px;width:70px;height:70px;border-radius:50%;border:3px solid rgba(255,255,255,.45);box-shadow:0 0 0 9px rgba(255,255,255,.18)}
+.door:hover{transform:translateY(-4px) rotate(-1deg)}
+.door:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.door b{font-family:var(--display);font-size:16px;font-weight:600}
+.door span{font-size:13px;opacity:.92}
+.door i{font-style:normal;font-size:12px;font-weight:700;background:rgba(255,255,255,.25);border-radius:999px;padding:2px 9px;align-self:flex-start;margin-bottom:4px}
+.yurt .hot:hover,.yurt .hot:focus{filter:drop-shadow(0 0 16px var(--hc,#E8C96A))}
+
+
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 16px}
+.tab{font:700 15px var(--body);border:2px solid color-mix(in srgb,var(--c) 35%,#fff);background:#fff;color:var(--ink);border-radius:999px;padding:10px 18px;cursor:pointer}
+.tab.on{background:linear-gradient(135deg,var(--c),var(--c2));color:#fff;border-color:transparent}
+.tab:focus-visible{outline:3px solid var(--c);outline-offset:2px}
+.tpane{display:none}.tpane.on{display:block}
+.lb{font-weight:700;font-size:14.5px;margin:12px 0 6px}
+.lb:first-child{margin-top:0}
+.inp{width:100%;font:inherit;font-size:16px;padding:10px 12px;border-radius:14px;border:1.5px solid color-mix(in srgb,var(--c) 28%,#fff);background:#fff;color:var(--ink)}
+.inp:focus{outline:none;border-color:var(--c);box-shadow:0 0 0 3px color-mix(in srgb,var(--c) 18%,transparent)}
+.chipset{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font:600 14px var(--body);border:1.5px solid color-mix(in srgb,var(--c) 30%,#fff);background:#fff;border-radius:999px;padding:7px 12px;cursor:pointer;color:var(--ink)}
+.chip[aria-pressed="true"]{background:color-mix(in srgb,var(--c) 14%,#fff);border-color:var(--c);color:color-mix(in srgb,var(--c) 70%,#000)}
+.stars{display:flex;gap:4px}
+.stars button{all:unset;cursor:pointer;font-size:30px;line-height:1;color:#E9DCC0;padding:2px}
+.stars button.on{color:#F5A300}
+.stars button:focus-visible{outline:2px solid var(--c);border-radius:6px}
+.moods{display:flex;gap:8px;flex-wrap:wrap}
+.moods button{all:unset;cursor:pointer;display:grid;place-items:center;gap:2px;width:64px;padding:8px 0;border-radius:18px;border:2px solid #F3E6EC;background:#fff;font-size:30px}
+.moods button span{font-size:11.5px;font-weight:700;color:var(--muted)}
+.moods button[aria-pressed="true"]{border-color:var(--c);background:color-mix(in srgb,var(--c) 10%,#fff);transform:scale(1.06)}
+.moods button:focus-visible{outline:3px solid var(--c)}
+.msg{white-space:pre-wrap;font:15px/1.5 var(--body);background:#FFFBF4;border:1px dashed color-mix(in srgb,var(--c) 40%,#fff);border-radius:14px;padding:12px;margin:0 0 12px;min-height:140px}
+.row{display:flex;gap:8px;flex-wrap:wrap}
+a.btn{text-decoration:none;display:inline-block}
+.room .btn.wa{background:linear-gradient(135deg,#25D366,#12A150);box-shadow:0 10px 20px -10px #25D366}
+.kpis{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.kpi{background:#fff;border-radius:18px;padding:12px 14px;border:1px solid color-mix(in srgb,var(--c) 22%,#fff)}
+.kpi b{display:block;font-family:var(--display);font-size:26px;color:var(--c)}
+.kpi span{font-size:13px;color:var(--muted)}
+.mbar{display:grid;grid-template-columns:34px 1fr 40px;gap:8px;align-items:center;margin:6px 0}
+.mbar .tr{height:14px;border-radius:8px;background:#F6EEF1;position:relative;overflow:hidden}
+.mbar .m{position:absolute;inset:0 auto 0 0;background:color-mix(in srgb,var(--c) 25%,#fff)}
+.mbar .d{position:absolute;left:0;top:3px;height:8px;border-radius:6px;background:linear-gradient(90deg,var(--c),var(--c2))}
+.flist{display:grid;gap:8px;margin-top:10px}
+.fi{border:1px solid color-mix(in srgb,var(--c) 18%,#fff);border-radius:14px;padding:10px 12px;background:#fff}
+.fi .top2{display:flex;gap:6px;flex-wrap:wrap;align-items:center;font-size:13px;color:var(--muted)}
+.fi p{margin:6px 0 0}
+.fi .done{margin-left:auto}
+.fi.answered{opacity:.62}
+
+
+/* ===== 3D HOME ===== */
+.homescr{position:relative;min-height:100vh;min-height:100dvh;overflow:hidden;
+ background:radial-gradient(60% 40% at 85% 8%,rgba(255,214,90,.55),transparent 70%),radial-gradient(50% 40% at 0% 60%,rgba(255,62,165,.18),transparent 70%),linear-gradient(180deg,#6FD3FF 0%,#AEE8FF 30%,#FFE1F0 66%,#FFF3D2 100%)}
+.hometop{position:relative;z-index:2;text-align:center;padding:16px 14px 0}
+.homescr .badge{background:rgba(255,255,255,.75);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-color:rgba(255,255,255,.9);color:#5B3CF0}
+.homescr h1{font-size:clamp(34px,7.4vw,70px);font-weight:800;line-height:1.02;margin:10px 0 4px;color:#2A1B5C;text-shadow:0 3px 0 #fff,0 10px 30px rgba(91,60,240,.25)}
+.homescr .badge{font-size:11px}@media(max-width:640px){.homescr .badge{font-size:9.5px;letter-spacing:.04em;padding:6px 12px}}
+.homescr .hint{margin:0;font-weight:700;color:#5B3CF0;font-size:clamp(14px,1.6vw,17px)}
+.stage{display:flex;justify-content:center;perspective:1400px;padding:4px 0 10px}
+:is(#home3d,#in3d){overflow:visible;width:min(100vw,calc((100dvh - 185px) * .695));min-width:min(100vw,380px);height:auto;transform-style:preserve-3d;transition:transform .25s ease-out;animation:arrive 1s cubic-bezier(.2,.9,.2,1.15) both}
+@keyframes arrive{from{opacity:0;transform:translateY(60px) scale(.9) rotateX(18deg)}to{opacity:1;transform:none}}
+:is(#home3d,#in3d) .hot{cursor:pointer;outline:none}
+:is(#home3d,#in3d) .det{transition:transform .25s,filter .25s;transform-box:fill-box;transform-origin:center bottom}
+:is(#home3d,#in3d) .det:hover,:is(#home3d,#in3d) .det:focus-visible,:is(#home3d,#in3d) .det.lit{filter:brightness(1.08) drop-shadow(0 0 14px rgba(255,255,255,1)) drop-shadow(0 0 26px rgba(255,214,90,.9));transform:translateY(-6px)}
+:is(#home3d,#in3d) .tag .bob{animation:bob 3.4s ease-in-out infinite;animation-delay:var(--d);transform-box:fill-box;transform-origin:center}
+:is(#home3d,#in3d) .tag:hover .bob,:is(#home3d,#in3d) .tag.lit .bob{animation-play-state:paused;transform:scale(1.08)}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+:is(#home3d,#in3d) .ping{transform-box:fill-box;transform-origin:center;animation:ping 1.8s ease-out infinite;animation-delay:var(--d)}
+@keyframes ping{0%{transform:scale(.8)}50%{transform:scale(1.35)}100%{transform:scale(.8)}}
+:is(#home3d,#in3d) .tt{font-family:var(--display);font-size:21px;font-weight:600;fill:#fff;pointer-events:none}
+:is(#home3d,#in3d) .ts{font-family:var(--body);font-size:15px;font-weight:700;fill:#fff;opacity:.92;pointer-events:none}
+:is(#home3d,#in3d) .num{font-family:var(--display);font-size:17px;font-weight:800;pointer-events:none}
+:is(#home3d,#in3d) .sunrot{animation:spin 30s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+:is(#home3d,#in3d) .cloud{animation:drift 14s ease-in-out infinite alternate}
+:is(#home3d,#in3d) .c2{animation-duration:18s}
+@keyframes drift{to{transform:translateX(40px)}}
+:is(#home3d,#in3d) .smoke circle{animation:smoke 4s ease-out infinite;transform-box:fill-box;transform-origin:center}
+:is(#home3d,#in3d) .smoke circle:nth-child(2){animation-delay:1.3s}:is(#home3d,#in3d) .smoke circle:nth-child(3){animation-delay:2.6s}
+@keyframes smoke{0%{transform:translate(0,0) scale(.6);opacity:0}20%{opacity:.9}100%{transform:translate(18px,-90px) scale(2.2);opacity:0}}
+:is(#home3d,#in3d) .steam path{stroke-dasharray:90;animation:steam 2.6s linear infinite}
+:is(#home3d,#in3d) .steam path:nth-child(2){animation-delay:1.2s}
+@keyframes steam{0%{stroke-dashoffset:90;opacity:0}30%{opacity:.9}100%{stroke-dashoffset:-90;opacity:0}}
+:is(#home3d,#in3d) .fire{transform-box:fill-box;transform-origin:center bottom;animation:fire .5s ease-in-out infinite alternate}
+@keyframes fire{to{transform:scaleY(1.15) scaleX(.94)}}
+:is(#home3d,#in3d) .tas{animation:tas 2.4s ease-in-out infinite alternate}
+@keyframes tas{from{transform:rotate(-7deg)}to{transform:rotate(7deg)}}
+:is(#home3d,#in3d) .sway{animation:sway 5s ease-in-out infinite alternate}
+@keyframes sway{to{transform:rotate(3deg)}}
+:is(#home3d,#in3d) .star{animation:tw2 1.8s ease-in-out infinite;transform-box:fill-box}
+@keyframes tw2{50%{transform:scale(1.25) rotate(20deg)}}
+.spk{position:absolute;width:10px;height:10px;border-radius:50%;background:#fff;box-shadow:0 0 14px 5px #FFE08A;animation:tw 3s ease-in-out infinite;z-index:1}
+footer{background:#FFF3D2}
+
+
+.inside{position:fixed;inset:0;z-index:40;overflow:hidden;background:radial-gradient(70% 60% at 50% 30%,#C98F4E,#5B1A08)}
+.inside[hidden]{display:none}
+.inside.show{animation:inon .9s cubic-bezier(.2,.8,.2,1) both}
+@keyframes inon{from{opacity:0;transform:scale(1.35);filter:blur(8px) brightness(1.6)}to{opacity:1;transform:none;filter:none}}
+.intop{position:absolute;left:0;right:0;top:0;z-index:3;display:flex;gap:10px;align-items:center;padding:12px max(14px,calc(50vw - 520px));background:linear-gradient(180deg,rgba(60,20,4,.55),transparent)}
+.inside .outbtn{display:inline-flex;align-items:center;font:700 15px var(--body);border:0;border-radius:999px;padding:10px 16px;cursor:pointer;color:#fff;background:linear-gradient(135deg,#22C55E,#0EA5A4);box-shadow:0 8px 18px -8px #000}
+.inttl{color:#FFF3C4;font-family:var(--display);font-size:16px;font-weight:600;text-shadow:0 2px 8px rgba(0,0,0,.4)}
+.inttl small{display:block;font-family:var(--body);font-size:12px;font-weight:600;color:#FFE08A}
+.stage2{height:100%;display:flex;justify-content:center;align-items:center;perspective:1400px}
+#in3d{width:min(100vw,calc(100dvh * .755));height:auto;max-height:100dvh;transition:transform .25s ease-out}
+#in3d .rays{animation:rays 5s ease-in-out infinite alternate}
+@keyframes rays{to{opacity:.25}}
+#in3d .rock{animation:rock 2.6s ease-in-out infinite alternate}
+@keyframes rock{from{transform:rotate(-4deg)}to{transform:rotate(4deg)}}
+#in3d .tea{stroke-dasharray:40;animation:steam 2.4s linear infinite}
+#home3d.enter{animation:zoomin 1.4s cubic-bezier(.55,0,.8,.4) forwards!important;transform-origin:50% 75%}
+@keyframes zoomin{0%{transform:none}38%{transform:scale(1.08)}100%{transform:scale(7);opacity:0;filter:brightness(1.8)}}
+#home3d.enter .leaf{transform-box:fill-box;transform-origin:right center;animation:dooropen .5s .05s ease-in forwards}
+@keyframes dooropen{to{transform:perspective(300px) rotateY(-80deg)}}
+.tlink{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:6px;margin:6px 6px 0 0;padding:5px 11px;border-radius:999px;font-size:13.5px;font-weight:700;color:#fff;background:linear-gradient(135deg,var(--tc),var(--tc2))}
+.tlink:focus-visible{outline:3px solid var(--ink)}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header class="homescr" id="home3">
+  <span class="spk" style="left:6%;top:30%"></span><span class="spk" style="left:92%;top:42%;animation-delay:1s"></span><span class="spk" style="left:14%;top:70%;animation-delay:2s"></span><span class="spk" style="left:84%;top:76%;animation-delay:.6s"></span>
+  <div class="hometop">
+    <span class="badge">✦ №109 мектеп · Астана · 4 «В» · 2026–2027 ✦</span>
+    <h1>Біздің <span class="rb">шаңырақ</span></h1>
+    <p class="hint">Киіз үйдің кез келген бөлігін бас — кабинет ашылады</p>
+  </div>
+  <div class="stage" id="stage">
+<svg class="yurt" id="home3d" viewBox="0 0 800 1150" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Киіз үй: бөліктерін басыңыз">
+<defs>
+<linearGradient id="t-shanyraq" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#F5A300"/><stop offset="1" stop-color="#FF7A00"/></linearGradient>
+<linearGradient id="t-uyq" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#00B8D9"/><stop offset="1" stop-color="#0077FF"/></linearGradient>
+<linearGradient id="t-esik" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#FF4D5E"/><stop offset="1" stop-color="#FF8A00"/></linearGradient>
+<linearGradient id="t-sandyq" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#FF3EA5"/><stop offset="1" stop-color="#B23CFF"/></linearGradient>
+<linearGradient id="t-tor" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#8B5CF6"/><stop offset="1" stop-color="#5B3CF0"/></linearGradient>
+<linearGradient id="t-baskur" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#10B981"/><stop offset="1" stop-color="#0EA5A4"/></linearGradient>
+<linearGradient id="t-zhoba" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#2F80FF"/><stop offset="1" stop-color="#00B8D9"/></linearGradient>
+<linearGradient id="t-qalqan" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#5B5BF0"/><stop offset="1" stop-color="#2F80FF"/></linearGradient>
+<linearGradient id="t-kerege" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#FF7A00"/><stop offset="1" stop-color="#FF4D5E"/></linearGradient>
+<linearGradient id="t-oyyn" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#D946EF"/><stop offset="1" stop-color="#FF3EA5"/></linearGradient>
+<linearGradient id="t-agash" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#22C55E"/><stop offset="1" stop-color="#84CC16"/></linearGradient>
+<linearGradient id="t-enter" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#FF4D5E"/><stop offset="1" stop-color="#FF8A00"/></linearGradient>
+<linearGradient id="t-bailanys" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#E11D48"/><stop offset="1" stop-color="#FF3EA5"/></linearGradient>
+<linearGradient id="gd" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#FFE08A"/><stop offset=".45" stop-color="#E0A92E"/><stop offset=".75" stop-color="#B47F12"/><stop offset="1" stop-color="#FFD66B"/></linearGradient>
+<linearGradient id="felt" x1="0" x2="1"><stop offset="0" stop-color="#E9E2F2"/><stop offset=".22" stop-color="#FFFFFF"/><stop offset=".5" stop-color="#FFFDF8"/><stop offset=".82" stop-color="#F3E7D2"/><stop offset="1" stop-color="#D9C7A6"/></linearGradient>
+<linearGradient id="roofg" x1="0" x2="1"><stop offset="0" stop-color="#EDE6F5"/><stop offset=".3" stop-color="#FFFFFF"/><stop offset=".6" stop-color="#FFF9EE"/><stop offset="1" stop-color="#DCCBA8"/></linearGradient>
+<linearGradient id="roofv" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".0"/><stop offset="1" stop-color="#C9A86A" stop-opacity=".22"/></linearGradient>
+<linearGradient id="rain" x1="0" x2="1"><stop offset="0" stop-color="#FF4D5E"/><stop offset=".17" stop-color="#FF7A00"/><stop offset=".33" stop-color="#F5A300"/><stop offset=".5" stop-color="#10B981"/><stop offset=".67" stop-color="#00B8D9"/><stop offset=".83" stop-color="#8B5CF6"/><stop offset="1" stop-color="#FF3EA5"/></linearGradient>
+<linearGradient id="shade" x1="0" x2="1"><stop offset="0" stop-color="#000" stop-opacity=".10"/><stop offset=".3" stop-color="#000" stop-opacity="0"/><stop offset=".7" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#3a2400" stop-opacity=".28"/></linearGradient>
+<linearGradient id="wood" x1="0" x2="1"><stop offset="0" stop-color="#FF8A00"/><stop offset=".5" stop-color="#F0562E"/><stop offset="1" stop-color="#C2321F"/></linearGradient>
+<radialGradient id="inside" cx=".5" cy=".6" r=".8"><stop offset="0" stop-color="#FFE7A3"/><stop offset=".55" stop-color="#9B6BFF"/><stop offset="1" stop-color="#3B1D8F"/></radialGradient>
+<radialGradient id="sun" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#FFF7C2"/><stop offset=".6" stop-color="#FFC93C"/><stop offset="1" stop-color="#FF9F1C"/></radialGradient>
+<radialGradient id="hill" cx=".5" cy="0" r="1"><stop offset="0" stop-color="#B8F27A"/><stop offset=".5" stop-color="#5CD67A"/><stop offset="1" stop-color="#1FA36A"/></radialGradient>
+<radialGradient id="qz" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#6B7CFF"/><stop offset=".6" stop-color="#2E3AA8"/><stop offset="1" stop-color="#141A5C"/></radialGradient>
+<linearGradient id="chestF" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#FF5DB8"/><stop offset="1" stop-color="#A42BEF"/></linearGradient>
+<linearGradient id="chestT" x1="0" x2="1"><stop offset="0" stop-color="#FF9AD5"/><stop offset="1" stop-color="#D266FF"/></linearGradient>
+<pattern id="lat" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M0 0L34 34M34 0L0 34" stroke="#E2B44A" stroke-width="2.4" opacity=".55"/><circle cx="17" cy="17" r="2.6" fill="#E2B44A" opacity=".8"/></pattern>
+<pattern id="oy" width="46" height="26" patternUnits="userSpaceOnUse"><path d="M23 23c-7 0-10-5-10-9s3-8 7-8 5 2 5 5-2 3-3 3M23 23c7 0 10-5 10-9s-3-8-7-8-5 2-5 5 2 3 3 3" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></pattern>
+<pattern id="oyg" width="46" height="26" patternUnits="userSpaceOnUse"><path d="M23 23c-7 0-10-5-10-9s3-8 7-8 5 2 5 5-2 3-3 3M23 23c7 0 10-5 10-9s-3-8-7-8-5 2-5 5 2 3 3 3" fill="none" stroke="url(#gd)" stroke-width="2.6" stroke-linecap="round"/></pattern>
+<filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#6b3d00" flood-opacity=".28"/></filter>
+<filter id="lift" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="8" stdDeviation="7" flood-color="#2a0a3a" flood-opacity=".35"/></filter>
+<clipPath id="wallclip"><path d="M120 620 A280 58 0 0 0 680 620 L680 860 A280 58 0 0 1 120 860 Z"/></clipPath>
+</defs>
+<g class="bg">
+<g class="sunrot" style="transform-origin:690px 120px"><g stroke="#FFC93C" stroke-width="6" stroke-linecap="round" opacity=".7"><line x1="756" y1="120" x2="778" y2="120"/><line x1="747" y1="153" x2="766" y2="164"/><line x1="723" y1="177" x2="734" y2="196"/><line x1="690" y1="186" x2="690" y2="208"/><line x1="657" y1="177" x2="646" y2="196"/><line x1="633" y1="153" x2="614" y2="164"/><line x1="624" y1="120" x2="602" y2="120"/><line x1="633" y1="87" x2="614" y2="76"/><line x1="657" y1="63" x2="646" y2="44"/><line x1="690" y1="54" x2="690" y2="32"/><line x1="723" y1="63" x2="734" y2="44"/><line x1="747" y1="87" x2="766" y2="76"/></g></g>
+<circle cx="690" cy="120" r="52" fill="url(#sun)"/>
+<g class="cloud c1" fill="#fff"><ellipse cx="130" cy="150" rx="70" ry="26"/><ellipse cx="170" cy="132" rx="44" ry="30"/><ellipse cx="105" cy="136" rx="32" ry="22"/></g>
+<g class="cloud c2" fill="#fff" opacity=".9"><ellipse cx="520" cy="80" rx="54" ry="20"/><ellipse cx="548" cy="66" rx="32" ry="22"/></g>
+<path d="M300 120q8-8 16 0q8-8 16 0M340 96q6-6 12 0q6-6 12 0" fill="none" stroke="#5B3CF0" stroke-width="3" stroke-linecap="round" opacity=".55"/>
+<path d="M-3000 960 L-600 960 Q-200 900 -20 980 Q200 860 420 900 T820 880 Q1100 840 1400 900 L3800 900 L3800 3000 L-3000 3000 Z" fill="url(#hill)"/>
+<path d="M-3000 1020 L-600 1020 Q-250 960 -20 1010 Q240 930 470 960 T820 940 Q1100 900 1400 960 L3800 960 L3800 3000 L-3000 3000 Z" fill="#2FBF71" opacity=".55"/>
+</g>
+<g class="hot det" data-go="agash" tabindex="0" role="link" aria-label="Бәйтерек — жақсылық ағашы">
+<path d="M728 900 C730 760 722 600 735 470" stroke="#9A6224" stroke-width="18" fill="none" stroke-linecap="round"/>
+<path d="M735 560 C705 520 690 500 680 470 M736 520 C765 490 780 470 790 445" stroke="#9A6224" stroke-width="9" fill="none" stroke-linecap="round"/>
+<circle cx="735" cy="430" r="80" fill="#C9F7A8" opacity=".55"/><g class="sway" style="transform-origin:735px 520px"><ellipse cx="737" cy="454" rx="13" ry="9" transform="rotate(101 737 454)" fill="#22C55E" stroke="#fff" stroke-width="1.5"/><ellipse cx="716" cy="433" rx="13" ry="9" transform="rotate(5 716 433)" fill="#84CC16" stroke="#fff" stroke-width="1.5"/><ellipse cx="684" cy="472" rx="13" ry="9" transform="rotate(15 684 472)" fill="#FF3EA5" stroke="#fff" stroke-width="1.5"/><ellipse cx="743" cy="485" rx="13" ry="9" transform="rotate(70 743 485)" fill="#F5A300" stroke="#fff" stroke-width="1.5"/><ellipse cx="746" cy="362" rx="13" ry="9" transform="rotate(67 746 362)" fill="#00B8D9" stroke="#fff" stroke-width="1.5"/><ellipse cx="749" cy="501" rx="13" ry="9" transform="rotate(164 749 501)" fill="#8B5CF6" stroke="#fff" stroke-width="1.5"/><ellipse cx="755" cy="367" rx="13" ry="9" transform="rotate(49 755 367)" fill="#FF7A00" stroke="#fff" stroke-width="1.5"/><ellipse cx="753" cy="465" rx="13" ry="9" transform="rotate(95 753 465)" fill="#10B981" stroke="#fff" stroke-width="1.5"/><ellipse cx="778" cy="460" rx="13" ry="9" transform="rotate(171 778 460)" fill="#22C55E" stroke="#fff" stroke-width="1.5"/><ellipse cx="710" cy="454" rx="13" ry="9" transform="rotate(63 710 454)" fill="#84CC16" stroke="#fff" stroke-width="1.5"/><ellipse cx="716" cy="434" rx="13" ry="9" transform="rotate(140 716 434)" fill="#FF3EA5" stroke="#fff" stroke-width="1.5"/><ellipse cx="738" cy="425" rx="13" ry="9" transform="rotate(74 738 425)" fill="#F5A300" stroke="#fff" stroke-width="1.5"/><ellipse cx="680" cy="399" rx="13" ry="9" transform="rotate(130 680 399)" fill="#00B8D9" stroke="#fff" stroke-width="1.5"/><ellipse cx="749" cy="476" rx="13" ry="9" transform="rotate(73 749 476)" fill="#8B5CF6" stroke="#fff" stroke-width="1.5"/><ellipse cx="711" cy="443" rx="13" ry="9" transform="rotate(78 711 443)" fill="#FF7A00" stroke="#fff" stroke-width="1.5"/><ellipse cx="731" cy="497" rx="13" ry="9" transform="rotate(20 731 497)" fill="#10B981" stroke="#fff" stroke-width="1.5"/><ellipse cx="784" cy="447" rx="13" ry="9" transform="rotate(71 784 447)" fill="#22C55E" stroke="#fff" stroke-width="1.5"/><ellipse cx="683" cy="423" rx="13" ry="9" transform="rotate(179 683 423)" fill="#84CC16" stroke="#fff" stroke-width="1.5"/><ellipse cx="699" cy="493" rx="13" ry="9" transform="rotate(50 699 493)" fill="#FF3EA5" stroke="#fff" stroke-width="1.5"/><ellipse cx="792" cy="459" rx="13" ry="9" transform="rotate(162 792 459)" fill="#F5A300" stroke="#fff" stroke-width="1.5"/><ellipse cx="712" cy="401" rx="13" ry="9" transform="rotate(91 712 401)" fill="#00B8D9" stroke="#fff" stroke-width="1.5"/><ellipse cx="689" cy="453" rx="13" ry="9" transform="rotate(162 689 453)" fill="#8B5CF6" stroke="#fff" stroke-width="1.5"/><ellipse cx="677" cy="404" rx="13" ry="9" transform="rotate(25 677 404)" fill="#FF7A00" stroke="#fff" stroke-width="1.5"/><ellipse cx="764" cy="376" rx="13" ry="9" transform="rotate(71 764 376)" fill="#10B981" stroke="#fff" stroke-width="1.5"/><ellipse cx="740" cy="371" rx="13" ry="9" transform="rotate(60 740 371)" fill="#22C55E" stroke="#fff" stroke-width="1.5"/><ellipse cx="780" cy="481" rx="13" ry="9" transform="rotate(74 780 481)" fill="#84CC16" stroke="#fff" stroke-width="1.5"/><ellipse cx="722" cy="434" rx="13" ry="9" transform="rotate(178 722 434)" fill="#FF3EA5" stroke="#fff" stroke-width="1.5"/><ellipse cx="790" cy="467" rx="13" ry="9" transform="rotate(73 790 467)" fill="#F5A300" stroke="#fff" stroke-width="1.5"/><ellipse cx="729" cy="356" rx="13" ry="9" transform="rotate(4 729 356)" fill="#00B8D9" stroke="#fff" stroke-width="1.5"/><ellipse cx="719" cy="468" rx="13" ry="9" transform="rotate(39 719 468)" fill="#8B5CF6" stroke="#fff" stroke-width="1.5"/><ellipse cx="742" cy="382" rx="13" ry="9" transform="rotate(158 742 382)" fill="#FF7A00" stroke="#fff" stroke-width="1.5"/><ellipse cx="727" cy="411" rx="13" ry="9" transform="rotate(158 727 411)" fill="#10B981" stroke="#fff" stroke-width="1.5"/><ellipse cx="751" cy="477" rx="13" ry="9" transform="rotate(34 751 477)" fill="#22C55E" stroke="#fff" stroke-width="1.5"/><ellipse cx="735" cy="489" rx="13" ry="9" transform="rotate(40 735 489)" fill="#84CC16" stroke="#fff" stroke-width="1.5"/><ellipse cx="732" cy="436" rx="13" ry="9" transform="rotate(11 732 436)" fill="#FF3EA5" stroke="#fff" stroke-width="1.5"/><ellipse cx="697" cy="443" rx="13" ry="9" transform="rotate(92 697 443)" fill="#F5A300" stroke="#fff" stroke-width="1.5"/><ellipse cx="784" cy="429" rx="13" ry="9" transform="rotate(112 784 429)" fill="#00B8D9" stroke="#fff" stroke-width="1.5"/><ellipse cx="777" cy="424" rx="13" ry="9" transform="rotate(53 777 424)" fill="#8B5CF6" stroke="#fff" stroke-width="1.5"/><ellipse cx="747" cy="442" rx="13" ry="9" transform="rotate(43 747 442)" fill="#FF7A00" stroke="#fff" stroke-width="1.5"/><ellipse cx="682" cy="388" rx="13" ry="9" transform="rotate(155 682 388)" fill="#10B981" stroke="#fff" stroke-width="1.5"/><ellipse cx="779" cy="443" rx="13" ry="9" transform="rotate(63 779 443)" fill="#22C55E" stroke="#fff" stroke-width="1.5"/><ellipse cx="730" cy="443" rx="13" ry="9" transform="rotate(135 730 443)" fill="#84CC16" stroke="#fff" stroke-width="1.5"/><ellipse cx="718" cy="503" rx="13" ry="9" transform="rotate(166 718 503)" fill="#FF3EA5" stroke="#fff" stroke-width="1.5"/><ellipse cx="780" cy="426" rx="13" ry="9" transform="rotate(61 780 426)" fill="#F5A300" stroke="#fff" stroke-width="1.5"/><ellipse cx="693" cy="450" rx="13" ry="9" transform="rotate(56 693 450)" fill="#00B8D9" stroke="#fff" stroke-width="1.5"/><ellipse cx="707" cy="448" rx="13" ry="9" transform="rotate(109 707 448)" fill="#8B5CF6" stroke="#fff" stroke-width="1.5"/></g></g>
+<g class="hot det" data-go="qalqan" tabindex="0" role="link" aria-label="Арқан мен қазық — қауіпсіздік">
+<path d="M112 612 Q70 780 48 948" fill="none" stroke="#5B5BF0" stroke-width="7" stroke-linecap="round"/><path d="M112 612 Q70 780 48 948" fill="none" stroke="#fff" stroke-width="3" stroke-dasharray="6 9" stroke-linecap="round"/>
+<path d="M38 940 l20 0 l-6 64 l-8 0 Z" fill="#9A6224"/><ellipse cx="48" cy="940" rx="13" ry="5" fill="#C78A3C"/>
+<circle cx="48" cy="948" r="9" fill="#5B5BF0" stroke="#fff" stroke-width="3"/></g>
+<ellipse cx="400" cy="925" rx="330" ry="52" fill="#0b5a37" opacity=".28"/>
+<g class="hot det" data-go="kerege" tabindex="0" role="link" aria-label="Кереге — ата-аналар">
+<path d="M120 620 A280 58 0 0 0 680 620 L680 860 A280 58 0 0 1 120 860 Z" fill="url(#felt)" filter="url(#soft)"/>
+<g clip-path="url(#wallclip)"><rect x="120" y="600" width="560" height="330" fill="url(#lat)"/>
+<path d="M120 825 A280 58 0 0 0 680 825 L680 847 A280 58 0 0 1 120 847 Z" fill="url(#t-kerege)"/><path d="M120 825 A280 58 0 0 0 680 825 L680 847 A280 58 0 0 1 120 847 Z" fill="url(#oy)" opacity=".9"/>
+<rect x="120" y="600" width="560" height="330" fill="url(#shade)"/></g></g>
+<g class="hot det" data-go="baskur" tabindex="0" role="link" aria-label="Баскұр — құндылықтар">
+<path d="M120 648 A280 58 0 0 0 680 648 L680 676 A280 58 0 0 1 120 676 Z" fill="url(#rain)"/>
+<path d="M120 648 A280 58 0 0 0 680 648 L680 676 A280 58 0 0 1 120 676 Z" fill="url(#oy)" opacity=".85"/>
+<path d="M120 648 A280 58 0 0 0 680 648" fill="none" stroke="#fff" stroke-width="2" opacity=".8"/></g>
+<g class="hot det" data-go="uyq" tabindex="0" role="link" aria-label="Уықтар — оқушылар">
+<path d="M100 610 L338 300 A62 16 0 0 0 462 300 L700 610 A300 62 0 0 1 100 610 Z" fill="url(#roofg)" filter="url(#soft)"/>
+<path d="M100 610 L338 300 A62 16 0 0 0 462 300 L700 610 A300 62 0 0 1 100 610 Z" fill="url(#roofv)"/>
+<path d="M461.4 302.3 Q591.0 454.6 696.9 618.8" stroke="#E0A92E" stroke-width="2.6" fill="none" stroke-linecap="round" opacity=".9"/><path d="M459.5 304.5 Q585.2 460.0 687.8 627.5" stroke="#E0A92E" stroke-width="2.6" fill="none" stroke-linecap="round" opacity=".9"/><path d="M456.4 306.6 Q575.6 465.2 672.9 635.8" stroke="#00B8D9" stroke-width="4" fill="none" stroke-linecap="round" opacity=".9"/><path d="M452.2 308.7 Q562.4 470.1 652.4 643.5" stroke="#E0A92E" stroke-width="2.6" fill="none" stroke-linecap="round" opacity=".9"/><path d="M446.9 310.5 Q545.9 474.5 626.7 650.6" stroke="#E0A92E" stroke-width="2.6" fill="none" stroke-linecap="round" opacity=".9"/><path d="M440.6 312.1 Q526.4 478.5 596.5 656.9" stroke="#8B5CF6" stroke-width="4" fill="none" stroke-linecap="round" opacity=".9"/><path d="M433.5 313.5 Q504.3 481.8 562.2 662.2" stroke="#E0A92E" stroke-width="2.6" fill="none" stroke-linecap="round" opacity=".9"/><path d="M425.8 314.6 Q480.2 484.5 524.6 666.4" stroke="#E0A92E" stroke-width="2.6" fill="none" stroke-linecap="round" opacity=".9"/><path d="M417.5 315.4 Q454.4 486.4 484.5 669.5" stroke="#10B981" stroke-width="4" fill="none" stroke-linecap="round" opacity=".9"/><path d="M408.8 315.8 Q427.5 487.6 442.7 671.4" stroke="#E0A92E" stroke-width="2.6" fill="none" stroke-linecap="round" opacity=".9"/><path d="M400.0 316.0 Q400.0 488.0 400.0 672.0" stroke="#E0A92E" stroke-width="2.6" fill="none" stroke-linecap="round" opacity=".9"/><path d="M391.2 315.8 Q372.5 487.6 357.3 671.4" stroke="#FF3EA5" stroke-width="4" fill="none" stroke-linecap="round" opacity=".9"/><path d="M382.5 315.4 Q345.6 486.4 315.5 669.5" stroke="#E0A92E" stroke-width="2.6" fill="none" stroke-linecap="round" opacity=".9"/><path d="M374.2 314.6 Q319.8 484.5 275.4 666.4" stroke="#E0A92E" stroke-width="2.6" fill="none" stroke-linecap="round" opacity=".9"/><path d="M366.5 313.5 Q295.7 481.8 237.8 662.2" stroke="#F5A300" stroke-width="4" fill="none" stroke-linecap="round" opacity=".9"/><path d="M359.4 312.1 Q273.6 478.5 203.5 656.9" stroke="#E0A92E" stroke-width="2.6" fill="none" stroke-linecap="round" opacity=".9"/><path d="M353.1 310.5 Q254.1 474.5 173.3 650.6" stroke="#E0A92E" stroke-width="2.6" fill="none" stroke-linecap="round" opacity=".9"/><path d="M347.8 308.7 Q237.6 470.1 147.6 643.5" stroke="#2F80FF" stroke-width="4" fill="none" stroke-linecap="round" opacity=".9"/><path d="M343.6 306.6 Q224.4 465.2 127.1 635.8" stroke="#E0A92E" stroke-width="2.6" fill="none" stroke-linecap="round" opacity=".9"/><path d="M340.5 304.5 Q214.8 460.0 112.2 627.5" stroke="#E0A92E" stroke-width="2.6" fill="none" stroke-linecap="round" opacity=".9"/><path d="M338.6 302.3 Q209.0 454.6 103.1 618.8" stroke="#FF4D5E" stroke-width="4" fill="none" stroke-linecap="round" opacity=".9"/>
+<path d="M100 610 A300 62 0 0 0 700 610" fill="none" stroke="url(#gd)" stroke-width="9"/>
+<path d="M104 618 A296 60 0 0 0 696 618" fill="none" stroke="url(#oyg)" stroke-width="0"/>
+<g class="tas" style="transform-origin:698px 619px;animation-delay:0.3s"><line x1="697.8" y1="619.5" x2="697.8" y2="635.5" stroke="#F5A300" stroke-width="2"/><path d="M692.8 633.5 L702.8 633.5 L697.8 649.5 Z" fill="#F5A300"/></g><g class="tas" style="transform-origin:691px 627px;animation-delay:0.6s"><line x1="691.3" y1="626.8" x2="691.3" y2="642.8" stroke="#10B981" stroke-width="2"/><path d="M686.3 640.8 L696.3 640.8 L691.3 656.8 Z" fill="#10B981"/></g><g class="tas" style="transform-origin:681px 634px;animation-delay:0.8999999999999999s"><line x1="680.5" y1="634.0" x2="680.5" y2="650.0" stroke="#00B8D9" stroke-width="2"/><path d="M675.5 648.0 L685.5 648.0 L680.5 664.0 Z" fill="#00B8D9"/></g><g class="tas" style="transform-origin:666px 641px;animation-delay:1.2s"><line x1="665.6" y1="640.8" x2="665.6" y2="656.8" stroke="#8B5CF6" stroke-width="2"/><path d="M660.6 654.8 L670.6 654.8 L665.6 670.8 Z" fill="#8B5CF6"/></g><g class="tas" style="transform-origin:647px 647px;animation-delay:0.0s"><line x1="646.9" y1="647.2" x2="646.9" y2="663.2" stroke="#FF3EA5" stroke-width="2"/><path d="M641.9 661.2 L651.9 661.2 L646.9 677.2 Z" fill="#FF3EA5"/></g><g class="tas" style="transform-origin:625px 653px;animation-delay:0.3s"><line x1="624.6" y1="653.1" x2="624.6" y2="669.1" stroke="#FF4D5E" stroke-width="2"/><path d="M619.6 667.1 L629.6 667.1 L624.6 683.1 Z" fill="#FF4D5E"/></g><g class="tas" style="transform-origin:599px 658px;animation-delay:0.6s"><line x1="598.9" y1="658.4" x2="598.9" y2="674.4" stroke="#F5A300" stroke-width="2"/><path d="M593.9 672.4 L603.9 672.4 L598.9 688.4 Z" fill="#F5A300"/></g><g class="tas" style="transform-origin:570px 663px;animation-delay:0.8999999999999999s"><line x1="570.4" y1="663.0" x2="570.4" y2="679.0" stroke="#10B981" stroke-width="2"/><path d="M565.4 677.0 L575.4 677.0 L570.4 693.0 Z" fill="#10B981"/></g><g class="tas" style="transform-origin:539px 667px;animation-delay:1.2s"><line x1="539.4" y1="666.9" x2="539.4" y2="682.9" stroke="#00B8D9" stroke-width="2"/><path d="M534.4 680.9 L544.4 680.9 L539.4 696.9 Z" fill="#00B8D9"/></g><g class="tas" style="transform-origin:506px 670px;animation-delay:0.0s"><line x1="506.4" y1="670.0" x2="506.4" y2="686.0" stroke="#8B5CF6" stroke-width="2"/><path d="M501.4 684.0 L511.4 684.0 L506.4 700.0 Z" fill="#8B5CF6"/></g><g class="tas" style="transform-origin:472px 672px;animation-delay:0.3s"><line x1="471.8" y1="672.2" x2="471.8" y2="688.2" stroke="#FF3EA5" stroke-width="2"/><path d="M466.8 686.2 L476.8 686.2 L471.8 702.2 Z" fill="#FF3EA5"/></g><g class="tas" style="transform-origin:436px 674px;animation-delay:0.6s"><line x1="436.2" y1="673.5" x2="436.2" y2="689.5" stroke="#FF4D5E" stroke-width="2"/><path d="M431.2 687.5 L441.2 687.5 L436.2 703.5 Z" fill="#FF4D5E"/></g><g class="tas" style="transform-origin:400px 674px;animation-delay:0.8999999999999999s"><line x1="400.0" y1="674.0" x2="400.0" y2="690.0" stroke="#F5A300" stroke-width="2"/><path d="M395.0 688.0 L405.0 688.0 L400.0 704.0 Z" fill="#F5A300"/></g><g class="tas" style="transform-origin:364px 674px;animation-delay:1.2s"><line x1="363.8" y1="673.5" x2="363.8" y2="689.5" stroke="#10B981" stroke-width="2"/><path d="M358.8 687.5 L368.8 687.5 L363.8 703.5 Z" fill="#10B981"/></g><g class="tas" style="transform-origin:328px 672px;animation-delay:0.0s"><line x1="328.2" y1="672.2" x2="328.2" y2="688.2" stroke="#00B8D9" stroke-width="2"/><path d="M323.2 686.2 L333.2 686.2 L328.2 702.2 Z" fill="#00B8D9"/></g><g class="tas" style="transform-origin:294px 670px;animation-delay:0.3s"><line x1="293.6" y1="670.0" x2="293.6" y2="686.0" stroke="#8B5CF6" stroke-width="2"/><path d="M288.6 684.0 L298.6 684.0 L293.6 700.0 Z" fill="#8B5CF6"/></g><g class="tas" style="transform-origin:261px 667px;animation-delay:0.6s"><line x1="260.6" y1="666.9" x2="260.6" y2="682.9" stroke="#FF3EA5" stroke-width="2"/><path d="M255.6 680.9 L265.6 680.9 L260.6 696.9 Z" fill="#FF3EA5"/></g><g class="tas" style="transform-origin:230px 663px;animation-delay:0.8999999999999999s"><line x1="229.6" y1="663.0" x2="229.6" y2="679.0" stroke="#FF4D5E" stroke-width="2"/><path d="M224.6 677.0 L234.6 677.0 L229.6 693.0 Z" fill="#FF4D5E"/></g><g class="tas" style="transform-origin:201px 658px;animation-delay:1.2s"><line x1="201.1" y1="658.4" x2="201.1" y2="674.4" stroke="#F5A300" stroke-width="2"/><path d="M196.1 672.4 L206.1 672.4 L201.1 688.4 Z" fill="#F5A300"/></g><g class="tas" style="transform-origin:175px 653px;animation-delay:0.0s"><line x1="175.4" y1="653.1" x2="175.4" y2="669.1" stroke="#10B981" stroke-width="2"/><path d="M170.4 667.1 L180.4 667.1 L175.4 683.1 Z" fill="#10B981"/></g><g class="tas" style="transform-origin:153px 647px;animation-delay:0.3s"><line x1="153.1" y1="647.2" x2="153.1" y2="663.2" stroke="#00B8D9" stroke-width="2"/><path d="M148.1 661.2 L158.1 661.2 L153.1 677.2 Z" fill="#00B8D9"/></g><g class="tas" style="transform-origin:134px 641px;animation-delay:0.6s"><line x1="134.4" y1="640.8" x2="134.4" y2="656.8" stroke="#8B5CF6" stroke-width="2"/><path d="M129.4 654.8 L139.4 654.8 L134.4 670.8 Z" fill="#8B5CF6"/></g><g class="tas" style="transform-origin:119px 634px;animation-delay:0.8999999999999999s"><line x1="119.5" y1="634.0" x2="119.5" y2="650.0" stroke="#FF3EA5" stroke-width="2"/><path d="M114.5 648.0 L124.5 648.0 L119.5 664.0 Z" fill="#FF3EA5"/></g><g class="tas" style="transform-origin:109px 627px;animation-delay:1.2s"><line x1="108.7" y1="626.8" x2="108.7" y2="642.8" stroke="#FF4D5E" stroke-width="2"/><path d="M103.7 640.8 L113.7 640.8 L108.7 656.8 Z" fill="#FF4D5E"/></g><g class="tas" style="transform-origin:102px 619px;animation-delay:0.0s"><line x1="102.2" y1="619.5" x2="102.2" y2="635.5" stroke="#F5A300" stroke-width="2"/><path d="M97.2 633.5 L107.2 633.5 L102.2 649.5 Z" fill="#F5A300"/></g></g>
+<g class="hot det" data-go="bailanys" tabindex="0" role="link" aria-label="Түндік — кері байланыс">
+<path d="M452 296 C490 300 520 296 540 286 L640 440 C600 462 560 470 520 468 Z" fill="url(#t-bailanys)" filter="url(#lift)"/>
+<path d="M452 296 C490 300 520 296 540 286 L640 440 C600 462 560 470 520 468 Z" fill="url(#oy)" opacity=".55"/>
+<path d="M466 312 C495 314 520 310 538 302 L620 432 C590 448 560 454 528 452 Z" fill="none" stroke="#FFE08A" stroke-width="3" stroke-dasharray="2 7" stroke-linecap="round"/>
+<path d="M640 440 Q690 520 712 600" fill="none" stroke="#E11D48" stroke-width="4"/></g>
+<g class="smoke" fill="#fff" opacity=".85"><circle cx="400" cy="270" r="14"/><circle cx="392" cy="270" r="10"/><circle cx="408" cy="270" r="9"/></g>
+<g class="hot det" data-go="shanyraq" tabindex="0" role="link" aria-label="Шаңырақ — сынып жетекшісі">
+<ellipse cx="400" cy="306" rx="70" ry="20" fill="#9A6B0C"/>
+<ellipse cx="400" cy="298" rx="70" ry="20" fill="url(#gd)" filter="url(#lift)"/>
+<ellipse cx="400" cy="294" rx="52" ry="13" fill="#7FE3FF"/>
+<ellipse cx="400" cy="294" rx="52" ry="13" fill="url(#t-shanyraq)" opacity=".25"/>
+<g stroke="#C2321F" stroke-width="5" stroke-linecap="round"><line x1="352.0" y1="294.0" x2="448.0" y2="294.0"/><line x1="400.0" y1="278.0" x2="400.0" y2="302.0"/><line x1="366.1" y1="281.5" x2="433.9" y2="298.5"/><line x1="366.1" y1="298.5" x2="433.9" y2="281.5"/></g>
+<g stroke="#FFE08A" stroke-width="2"><line x1="352.0" y1="292.0" x2="448.0" y2="292.0"/><line x1="400.0" y1="278.0" x2="400.0" y2="302.0"/><line x1="366.1" y1="281.5" x2="433.9" y2="298.5"/><line x1="366.1" y1="298.5" x2="433.9" y2="281.5"/></g>
+<ellipse cx="400" cy="294" rx="52" ry="13" fill="none" stroke="#FFF3C4" stroke-width="3"/></g>
+<g class="hot det" data-go="enter" tabindex="-1" role="link" aria-label="Киіз үйдің ішіне кіру">
+<path d="M340 914 L340 772 Q340 742 370 740 L400 739 L400 917 Z" fill="url(#inside)"/>
+<path d="M346 860 h52 v40 h-52Z" fill="#8B5CF6" opacity=".7"/><path d="M350 872 q6-8 12 0 t12 0 t12 0 t12 0" fill="none" stroke="#FFE08A" stroke-width="2.5"/>
+<path class="star" d="M372 790 l6 12 13 2 -9 9 2 13 -12-6 -12 6 2-13 -9-9 13-2Z" fill="#FFE08A" stroke="#fff" stroke-width="1.5" style="transform-origin:372px 806px"/></g>
+<g class="hot det" data-go="enter" tabindex="0" role="link" aria-label="Есік — киіз үйдің ішіне кіру">
+<path class="leaf" d="M400 739 L430 740 Q460 742 460 772 L460 914 L400 917 Z" fill="url(#wood)" filter="url(#lift)"/>
+<path d="M410 760 h40 v62 h-40Z M410 836 h40 v66 h-40Z" fill="none" stroke="#FFE08A" stroke-width="3"/>
+<path d="M430 776c-8 0-11 6-11 11s3 9 7 9 5-3 5-5-2-4-4-4M430 776c8 0 11 6 11 11s-3 9-7 9-5-3-5-5 2-4 4-4" fill="none" stroke="#FFE08A" stroke-width="2.6"/>
+<path d="M430 852c-8 0-11 6-11 11s3 9 7 9 5-3 5-5-2-4-4-4M430 852c8 0 11 6 11 11s-3 9-7 9-5-3-5-5 2-4 4-4" fill="none" stroke="#FFE08A" stroke-width="2.6"/>
+<circle cx="408" cy="834" r="4" fill="#FFE08A"/>
+<path d="M340 772 L296 790 L296 932 L340 914 Z" fill="#E8542E"/><path d="M340 772 L296 790 L296 932 L340 914 Z" fill="url(#oyg)" opacity=".7"/>
+<path d="M334 742 Q400 718 466 742" fill="none" stroke="url(#gd)" stroke-width="8" stroke-linecap="round"/></g>
+<g class="hot det" data-go="sandyq" tabindex="0" role="link" aria-label="Сандық — туған күндер">
+<ellipse cx="150" cy="1062" rx="100" ry="14" fill="#0b5a37" opacity=".3"/>
+<path d="M60 975 L210 975 L240 950 L90 950 Z" fill="url(#chestT)"/>
+<path d="M210 975 L240 950 L240 1030 L210 1055 Z" fill="#7A1FB8"/>
+<rect x="60" y="975" width="150" height="80" rx="4" fill="url(#chestF)" filter="url(#lift)"/>
+<rect x="70" y="985" width="130" height="60" rx="6" fill="url(#oy)" opacity=".7"/>
+<path d="M60 990 h150" stroke="url(#gd)" stroke-width="5"/>
+<circle cx="135" cy="1010" r="11" fill="url(#gd)" stroke="#fff" stroke-width="2"/><rect x="132" y="1008" width="6" height="9" rx="2" fill="#7A1FB8"/></g>
+<g class="hot det" data-go="zhoba" tabindex="0" role="link" aria-label="Қазан — жобалар">
+<g class="steam" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" opacity=".85"><path d="M630 930 q-14-20 0-38 q14-18 0-36"/><path d="M668 926 q-12-18 0-34 q12-16 0-32"/></g>
+<path d="M590 960 L560 1080 M710 960 L740 1080 M650 950 L650 1080" stroke="#7A4A1A" stroke-width="7" stroke-linecap="round"/>
+<g class="fire"><path d="M620 1080 q10-40 30-50 q-6 22 10 30 q8-22 22-26 q-6 30 6 46 Z" fill="#FF7A00"/><path d="M640 1080 q8-24 16-30 q0 14 10 18 q4-12 12-14 q-2 18 2 26Z" fill="#FFD23F"/></g>
+<ellipse cx="650" cy="1000" rx="76" ry="44" fill="url(#qz)" filter="url(#lift)"/>
+<ellipse cx="650" cy="970" rx="70" ry="16" fill="#1B2270"/><ellipse cx="650" cy="968" rx="58" ry="11" fill="#FFB547"/>
+<circle cx="636" cy="966" r="5" fill="#FF4D5E"/><circle cx="660" cy="969" r="4" fill="#10B981"/><circle cx="672" cy="965" r="4" fill="#00B8D9"/>
+<path d="M584 990 q66 22 132 0" fill="none" stroke="url(#gd)" stroke-width="5"/></g>
+<g class="hot det" data-go="oyyn" tabindex="0" role="link" aria-label="Асық — ойын"><ellipse cx="400" cy="1082" rx="72" ry="30" fill="#fff" opacity=".001"/><g transform="rotate(-20 360 1068)"><path d="M344 1060 q16-8 32 0 q6 8 0 16 q-16 8 -32 0 q-6 -8 0 -16Z" fill="#FF3EA5" stroke="#fff" stroke-width="2.5"/><ellipse cx="360" cy="1068" rx="6" ry="4" fill="#fff" opacity=".7"/></g><g transform="rotate(10 400 1080)"><path d="M384 1072 q16-8 32 0 q6 8 0 16 q-16 8 -32 0 q-6 -8 0 -16Z" fill="#F5A300" stroke="#fff" stroke-width="2.5"/><ellipse cx="400" cy="1080" rx="6" ry="4" fill="#fff" opacity=".7"/></g><g transform="rotate(30 440 1066)"><path d="M424 1058 q16-8 32 0 q6 8 0 16 q-16 8 -32 0 q-6 -8 0 -16Z" fill="#00B8D9" stroke="#fff" stroke-width="2.5"/><ellipse cx="440" cy="1066" rx="6" ry="4" fill="#fff" opacity=".7"/></g><g transform="rotate(0 382 1098)"><path d="M366 1090 q16-8 32 0 q6 8 0 16 q-16 8 -32 0 q-6 -8 0 -16Z" fill="#8B5CF6" stroke="#fff" stroke-width="2.5"/><ellipse cx="382" cy="1098" rx="6" ry="4" fill="#fff" opacity=".7"/></g></g>
+<g class="hot tag" data-go="shanyraq" data-x="400" tabindex="-1" aria-hidden="true" style="--d:0.00s">
+<line x1="400" y1="290" x2="400" y2="222" stroke="#fff" stroke-width="3" stroke-dasharray="3 5" opacity=".95"/>
+<circle class="ping" cx="400" cy="290" r="7" fill="#F5A300" stroke="#fff" stroke-width="3"/>
+<g class="bob"><rect class="bx" x="311" y="193.0" width="178" height="58" rx="29" fill="url(#t-shanyraq)" stroke="#fff" stroke-width="3" filter="url(#lift)"/>
+<circle class="bc" cx="340" cy="222" r="19" fill="#fff" opacity=".95"/><text x="340" y="223" class="num" fill="#FF7A00" text-anchor="middle" dominant-baseline="middle">1</text>
+<text x="367" y="218" class="tt">Шаңырақ</text><text x="367" y="239" class="ts">ұстаз</text></g></g>
+<g class="hot tag" data-go="bailanys" data-x="600" tabindex="-1" aria-hidden="true" style="--d:0.23s">
+<line x1="560" y1="380" x2="600" y2="360" stroke="#fff" stroke-width="3" stroke-dasharray="3 5" opacity=".95"/>
+<circle class="ping" cx="560" cy="380" r="7" fill="#E11D48" stroke="#fff" stroke-width="3"/>
+<g class="bob"><rect class="bx" x="509" y="331.0" width="182" height="58" rx="29" fill="url(#t-bailanys)" stroke="#fff" stroke-width="3" filter="url(#lift)"/>
+<circle class="bc" cx="538" cy="360" r="19" fill="#fff" opacity=".95"/><text x="538" y="361" class="num" fill="#FF3EA5" text-anchor="middle" dominant-baseline="middle">2</text>
+<text x="565" y="356" class="tt">Түндік</text><text x="565" y="377" class="ts">кері байланыс</text></g></g>
+<g class="hot tag" data-go="uyq" data-x="225" tabindex="-1" aria-hidden="true" style="--d:0.46s">
+<line x1="290" y1="500" x2="225" y2="470" stroke="#fff" stroke-width="3" stroke-dasharray="3 5" opacity=".95"/>
+<circle class="ping" cx="290" cy="500" r="7" fill="#00B8D9" stroke="#fff" stroke-width="3"/>
+<g class="bob"><rect class="bx" x="144" y="441.0" width="163" height="58" rx="29" fill="url(#t-uyq)" stroke="#fff" stroke-width="3" filter="url(#lift)"/>
+<circle class="bc" cx="172" cy="470" r="19" fill="#fff" opacity=".95"/><text x="172" y="471" class="num" fill="#0077FF" text-anchor="middle" dominant-baseline="middle">3</text>
+<text x="200" y="466" class="tt">Уықтар</text><text x="200" y="487" class="ts">22 оқушы</text></g></g>
+<g class="hot tag" data-go="agash" data-x="690" tabindex="-1" aria-hidden="true" style="--d:0.69s">
+<line x1="735" y1="370" x2="690" y2="262" stroke="#fff" stroke-width="3" stroke-dasharray="3 5" opacity=".95"/>
+<circle class="ping" cx="735" cy="370" r="7" fill="#22C55E" stroke="#fff" stroke-width="3"/>
+<g class="bob"><rect class="bx" x="593" y="233.0" width="194" height="58" rx="29" fill="url(#t-agash)" stroke="#fff" stroke-width="3" filter="url(#lift)"/>
+<circle class="bc" cx="622" cy="262" r="19" fill="#fff" opacity=".95"/><text x="622" y="263" class="num" fill="#84CC16" text-anchor="middle" dominant-baseline="middle">4</text>
+<text x="649" y="258" class="tt">Бәйтерек</text><text x="649" y="279" class="ts">жақсылық ағашы</text></g></g>
+<g class="hot tag" data-go="qalqan" data-x="100" tabindex="-1" aria-hidden="true" style="--d:0.92s">
+<line x1="92" y1="700" x2="100" y2="545" stroke="#fff" stroke-width="3" stroke-dasharray="3 5" opacity=".95"/>
+<circle class="ping" cx="92" cy="700" r="7" fill="#5B5BF0" stroke="#fff" stroke-width="3"/>
+<g class="bob"><rect class="bx" x="18" y="516.0" width="165" height="58" rx="29" fill="url(#t-qalqan)" stroke="#fff" stroke-width="3" filter="url(#lift)"/>
+<circle class="bc" cx="47" cy="545" r="19" fill="#fff" opacity=".95"/><text x="47" y="546" class="num" fill="#2F80FF" text-anchor="middle" dominant-baseline="middle">5</text>
+<text x="74" y="541" class="tt">Арқан</text><text x="74" y="562" class="ts">қауіпсіздік</text></g></g>
+<g class="hot tag" data-go="baskur" data-x="580" tabindex="-1" aria-hidden="true" style="--d:1.15s">
+<line x1="560" y1="700" x2="580" y2="722" stroke="#fff" stroke-width="3" stroke-dasharray="3 5" opacity=".95"/>
+<circle class="ping" cx="560" cy="700" r="7" fill="#10B981" stroke="#fff" stroke-width="3"/>
+<g class="bob"><rect class="bx" x="498" y="693.0" width="165" height="58" rx="29" fill="url(#t-baskur)" stroke="#fff" stroke-width="3" filter="url(#lift)"/>
+<circle class="bc" cx="527" cy="722" r="19" fill="#fff" opacity=".95"/><text x="527" y="723" class="num" fill="#0EA5A4" text-anchor="middle" dominant-baseline="middle">6</text>
+<text x="554" y="718" class="tt">Баскұр</text><text x="554" y="739" class="ts">құндылықтар</text></g></g>
+<g class="hot tag" data-go="kerege" data-x="215" tabindex="-1" aria-hidden="true" style="--d:1.38s">
+<line x1="180" y1="790" x2="215" y2="755" stroke="#fff" stroke-width="3" stroke-dasharray="3 5" opacity=".95"/>
+<circle class="ping" cx="180" cy="790" r="7" fill="#FF7A00" stroke="#fff" stroke-width="3"/>
+<g class="bob"><rect class="bx" x="134" y="726.0" width="163" height="58" rx="29" fill="url(#t-kerege)" stroke="#fff" stroke-width="3" filter="url(#lift)"/>
+<circle class="bc" cx="162" cy="755" r="19" fill="#fff" opacity=".95"/><text x="162" y="756" class="num" fill="#FF4D5E" text-anchor="middle" dominant-baseline="middle">7</text>
+<text x="190" y="751" class="tt">Кереге</text><text x="190" y="772" class="ts">ата-ана</text></g></g>
+<g class="hot tag" data-go="enter" data-x="565" tabindex="-1" aria-hidden="true" style="--d:1.61s">
+<line x1="460" y1="830" x2="565" y2="815" stroke="#fff" stroke-width="3" stroke-dasharray="3 5" opacity=".95"/>
+<circle class="ping" cx="460" cy="830" r="7" fill="#FF4D5E" stroke="#fff" stroke-width="3"/>
+<g class="bob"><rect class="bx" x="483" y="786.0" width="165" height="58" rx="29" fill="url(#t-enter)" stroke="#fff" stroke-width="3" filter="url(#lift)"/>
+<circle class="bc" cx="512" cy="815" r="19" fill="#fff" opacity=".95"/><text x="512" y="816" class="num" fill="#FF8A00" text-anchor="middle" dominant-baseline="middle">8</text>
+<text x="539" y="811" class="tt">Есік</text><text x="539" y="832" class="ts">ішке кіру →</text></g></g>
+<g class="hot tag" data-go="sandyq" data-x="150" tabindex="-1" aria-hidden="true" style="--d:1.84s">
+<line x1="150" y1="1040" x2="150" y2="1110" stroke="#fff" stroke-width="3" stroke-dasharray="3 5" opacity=".95"/>
+<circle class="ping" cx="150" cy="1040" r="7" fill="#FF3EA5" stroke="#fff" stroke-width="3"/>
+<g class="bob"><rect class="bx" x="63" y="1081.0" width="173" height="58" rx="29" fill="url(#t-sandyq)" stroke="#fff" stroke-width="3" filter="url(#lift)"/>
+<circle class="bc" cx="92" cy="1110" r="19" fill="#fff" opacity=".95"/><text x="92" y="1111" class="num" fill="#B23CFF" text-anchor="middle" dominant-baseline="middle">9</text>
+<text x="119" y="1106" class="tt">Сандық</text><text x="119" y="1127" class="ts">туған күндер</text></g></g>
+<g class="hot tag" data-go="zhoba" data-x="650" tabindex="-1" aria-hidden="true" style="--d:2.07s">
+<line x1="650" y1="1000" x2="650" y2="1120" stroke="#fff" stroke-width="3" stroke-dasharray="3 5" opacity=".95"/>
+<circle class="ping" cx="650" cy="1000" r="7" fill="#2F80FF" stroke="#fff" stroke-width="3"/>
+<g class="bob"><rect class="bx" x="576" y="1091.0" width="148" height="58" rx="29" fill="url(#t-zhoba)" stroke="#fff" stroke-width="3" filter="url(#lift)"/>
+<circle class="bc" cx="605" cy="1120" r="19" fill="#fff" opacity=".95"/><text x="605" y="1121" class="num" fill="#00B8D9" text-anchor="middle" dominant-baseline="middle">10</text>
+<text x="632" y="1116" class="tt">Қазан</text><text x="632" y="1137" class="ts">жобалар</text></g></g>
+<g class="hot tag" data-go="oyyn" data-x="400" tabindex="-1" aria-hidden="true" style="--d:2.30s">
+<line x1="400" y1="1080" x2="400" y2="1125" stroke="#fff" stroke-width="3" stroke-dasharray="3 5" opacity=".95"/>
+<circle class="ping" cx="400" cy="1080" r="7" fill="#D946EF" stroke="#fff" stroke-width="3"/>
+<g class="bob"><rect class="bx" x="334" y="1096.0" width="132" height="58" rx="29" fill="url(#t-oyyn)" stroke="#fff" stroke-width="3" filter="url(#lift)"/>
+<circle class="bc" cx="363" cy="1125" r="19" fill="#fff" opacity=".95"/><text x="363" y="1126" class="num" fill="#FF3EA5" text-anchor="middle" dominant-baseline="middle">11</text>
+<text x="390" y="1121" class="tt">Асық</text><text x="390" y="1142" class="ts">ойын</text></g></g>
+</svg>
+  </div>
+</header>
+<div class="orn" aria-hidden="true"></div>
+
+<div class="inside" id="inside3" hidden>
+  <div class="intop"><button class="outbtn" id="goOut">← Сыртқа шығу</button><div class="inttl">Шаңырақ ішінде <small>Затты бас — кабинет ашылады</small></div></div>
+  <div class="stage2"><svg class="yurt" id="in3d" viewBox="0 0 800 1060" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Киіз үйдің іші: заттарды басыңыз">
+<defs>
+<linearGradient id="i-shanyraq" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#F5A300"/><stop offset="1" stop-color="#FF7A00"/></linearGradient>
+<linearGradient id="i-uyq" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#00B8D9"/><stop offset="1" stop-color="#0077FF"/></linearGradient>
+<linearGradient id="i-esik" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#FF4D5E"/><stop offset="1" stop-color="#FF8A00"/></linearGradient>
+<linearGradient id="i-sandyq" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#FF3EA5"/><stop offset="1" stop-color="#B23CFF"/></linearGradient>
+<linearGradient id="i-tor" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#8B5CF6"/><stop offset="1" stop-color="#5B3CF0"/></linearGradient>
+<linearGradient id="i-baskur" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#10B981"/><stop offset="1" stop-color="#0EA5A4"/></linearGradient>
+<linearGradient id="i-zhoba" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#2F80FF"/><stop offset="1" stop-color="#00B8D9"/></linearGradient>
+<linearGradient id="i-qalqan" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#5B5BF0"/><stop offset="1" stop-color="#2F80FF"/></linearGradient>
+<linearGradient id="i-kerege" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#FF7A00"/><stop offset="1" stop-color="#FF4D5E"/></linearGradient>
+<linearGradient id="i-oyyn" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#D946EF"/><stop offset="1" stop-color="#FF3EA5"/></linearGradient>
+<linearGradient id="i-bailanys" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#E11D48"/><stop offset="1" stop-color="#FF3EA5"/></linearGradient>
+<linearGradient id="i-ereje" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#C2410C"/><stop offset="1" stop-color="#F59E0B"/></linearGradient>
+<linearGradient id="igd" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#FFE08A"/><stop offset=".5" stop-color="#E0A92E"/><stop offset="1" stop-color="#B47F12"/></linearGradient>
+<radialGradient id="roofin" cx=".5" cy=".05" r="1"><stop offset="0" stop-color="#FFF4D6"/><stop offset=".35" stop-color="#F6DFAE"/><stop offset="1" stop-color="#C98F4E"/></radialGradient>
+<linearGradient id="wallin" x1="0" x2="1"><stop offset="0" stop-color="#E9B97A"/><stop offset=".5" stop-color="#FBE3B6"/><stop offset="1" stop-color="#E2AE6C"/></linearGradient>
+<radialGradient id="sky" cx=".5" cy=".5" r=".6"><stop offset="0" stop-color="#E9FBFF"/><stop offset="1" stop-color="#5CC8FF"/></radialGradient>
+<linearGradient id="ray" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#FFF6C8" stop-opacity=".75"/><stop offset="1" stop-color="#FFF6C8" stop-opacity="0"/></linearGradient>
+<pattern id="latin" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M0 0L30 30M30 0L0 30" stroke="#B4441E" stroke-width="3.2"/><circle cx="15" cy="15" r="2.8" fill="#FFD27A"/></pattern>
+<pattern id="oyw" width="44" height="26" patternUnits="userSpaceOnUse"><path d="M22 23c-7 0-10-5-10-9s3-8 7-8 5 2 5 5-2 3-3 3M22 23c7 0 10-5 10-9s-3-8-7-8-5 2-5 5 2 3 3 3" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></pattern>
+<pattern id="oyy" width="44" height="26" patternUnits="userSpaceOnUse"><path d="M22 23c-7 0-10-5-10-9s3-8 7-8 5 2 5 5-2 3-3 3M22 23c7 0 10-5 10-9s-3-8-7-8-5 2-5 5 2 3 3 3" fill="none" stroke="#FFD23F" stroke-width="2.4" stroke-linecap="round"/></pattern>
+<filter id="isoft" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="10" stdDeviation="9" flood-color="#3a1600" flood-opacity=".35"/></filter>
+<clipPath id="floorclip"><path d="M20 800 A380 90 0 0 1 780 800 L1200 1000 L1200 1300 L-400 1300 L-400 1000 Z"/></clipPath>
+</defs>
+<rect x="-400" y="-200" width="1600" height="1500" fill="#7A3B12"/>
+<g class="hot det" data-go="uyq" tabindex="0" role="link" aria-label="Уықтар — оқушылар">
+<path d="M-400 -200 L1200 -200 L1200 470 L780 470 A380 70 0 0 0 20 470 L-400 470 Z" fill="url(#roofin)"/>
+<path d="M330 128 L120 330 A300 60 0 0 1 680 330 L470 128 Z" fill="#3E7BD6" opacity=".25"/>
+<line x1="480.0" y1="128.0" x2="780.0" y2="470.0" stroke="#B4441E" stroke-width="5" stroke-linecap="round"/><line x1="480.0" y1="128.0" x2="780.0" y2="470.0" stroke="#FF8A4C" stroke-width="1.7" stroke-linecap="round" opacity=".7"/><line x1="479.2" y1="131.1" x2="776.1" y2="480.0" stroke="#B4441E" stroke-width="5" stroke-linecap="round"/><line x1="479.2" y1="131.1" x2="776.1" y2="480.0" stroke="#FF8A4C" stroke-width="1.7" stroke-linecap="round" opacity=".7"/><line x1="476.8" y1="134.2" x2="1743.3" y2="356.2" stroke="#B4441E" stroke-width="7" stroke-linecap="round"/><line x1="476.8" y1="134.2" x2="1743.3" y2="356.2" stroke="#FF8A4C" stroke-width="2.3" stroke-linecap="round" opacity=".7"/><line x1="472.8" y1="137.1" x2="1673.5" y2="464.5" stroke="#B4441E" stroke-width="7" stroke-linecap="round"/><line x1="472.8" y1="137.1" x2="1673.5" y2="464.5" stroke="#FF8A4C" stroke-width="2.3" stroke-linecap="round" opacity=".7"/><line x1="467.3" y1="139.9" x2="1577.8" y2="565.9" stroke="#B4441E" stroke-width="7" stroke-linecap="round"/><line x1="467.3" y1="139.9" x2="1577.8" y2="565.9" stroke="#FF8A4C" stroke-width="2.3" stroke-linecap="round" opacity=".7"/><line x1="460.5" y1="142.4" x2="1458.0" y2="658.4" stroke="#B4441E" stroke-width="7" stroke-linecap="round"/><line x1="460.5" y1="142.4" x2="1458.0" y2="658.4" stroke="#FF8A4C" stroke-width="2.3" stroke-linecap="round" opacity=".7"/><line x1="452.4" y1="144.6" x2="1316.8" y2="740.2" stroke="#B4441E" stroke-width="7" stroke-linecap="round"/><line x1="452.4" y1="144.6" x2="1316.8" y2="740.2" stroke="#FF8A4C" stroke-width="2.3" stroke-linecap="round" opacity=".7"/><line x1="443.3" y1="146.5" x2="1156.9" y2="809.4" stroke="#B4441E" stroke-width="7" stroke-linecap="round"/><line x1="443.3" y1="146.5" x2="1156.9" y2="809.4" stroke="#FF8A4C" stroke-width="2.3" stroke-linecap="round" opacity=".7"/><line x1="433.2" y1="148.0" x2="981.6" y2="864.8" stroke="#B4441E" stroke-width="7" stroke-linecap="round"/><line x1="433.2" y1="148.0" x2="981.6" y2="864.8" stroke="#FF8A4C" stroke-width="2.3" stroke-linecap="round" opacity=".7"/><line x1="422.5" y1="149.1" x2="794.4" y2="905.2" stroke="#B4441E" stroke-width="7" stroke-linecap="round"/><line x1="422.5" y1="149.1" x2="794.4" y2="905.2" stroke="#FF8A4C" stroke-width="2.3" stroke-linecap="round" opacity=".7"/><line x1="411.4" y1="149.8" x2="599.2" y2="929.8" stroke="#B4441E" stroke-width="7" stroke-linecap="round"/><line x1="411.4" y1="149.8" x2="599.2" y2="929.8" stroke="#FF8A4C" stroke-width="2.3" stroke-linecap="round" opacity=".7"/><line x1="400.0" y1="150.0" x2="400.0" y2="938.0" stroke="#B4441E" stroke-width="7" stroke-linecap="round"/><line x1="400.0" y1="150.0" x2="400.0" y2="938.0" stroke="#FF8A4C" stroke-width="2.3" stroke-linecap="round" opacity=".7"/><line x1="388.6" y1="149.8" x2="200.8" y2="929.8" stroke="#B4441E" stroke-width="7" stroke-linecap="round"/><line x1="388.6" y1="149.8" x2="200.8" y2="929.8" stroke="#FF8A4C" stroke-width="2.3" stroke-linecap="round" opacity=".7"/><line x1="377.5" y1="149.1" x2="5.6" y2="905.2" stroke="#B4441E" stroke-width="7" stroke-linecap="round"/><line x1="377.5" y1="149.1" x2="5.6" y2="905.2" stroke="#FF8A4C" stroke-width="2.3" stroke-linecap="round" opacity=".7"/><line x1="366.8" y1="148.0" x2="-181.6" y2="864.8" stroke="#B4441E" stroke-width="7" stroke-linecap="round"/><line x1="366.8" y1="148.0" x2="-181.6" y2="864.8" stroke="#FF8A4C" stroke-width="2.3" stroke-linecap="round" opacity=".7"/><line x1="356.7" y1="146.5" x2="-356.9" y2="809.4" stroke="#B4441E" stroke-width="7" stroke-linecap="round"/><line x1="356.7" y1="146.5" x2="-356.9" y2="809.4" stroke="#FF8A4C" stroke-width="2.3" stroke-linecap="round" opacity=".7"/><line x1="347.6" y1="144.6" x2="-516.8" y2="740.2" stroke="#B4441E" stroke-width="7" stroke-linecap="round"/><line x1="347.6" y1="144.6" x2="-516.8" y2="740.2" stroke="#FF8A4C" stroke-width="2.3" stroke-linecap="round" opacity=".7"/><line x1="339.5" y1="142.4" x2="-658.0" y2="658.4" stroke="#B4441E" stroke-width="7" stroke-linecap="round"/><line x1="339.5" y1="142.4" x2="-658.0" y2="658.4" stroke="#FF8A4C" stroke-width="2.3" stroke-linecap="round" opacity=".7"/><line x1="332.7" y1="139.9" x2="-777.8" y2="565.9" stroke="#B4441E" stroke-width="7" stroke-linecap="round"/><line x1="332.7" y1="139.9" x2="-777.8" y2="565.9" stroke="#FF8A4C" stroke-width="2.3" stroke-linecap="round" opacity=".7"/><line x1="327.2" y1="137.1" x2="-873.5" y2="464.5" stroke="#B4441E" stroke-width="7" stroke-linecap="round"/><line x1="327.2" y1="137.1" x2="-873.5" y2="464.5" stroke="#FF8A4C" stroke-width="2.3" stroke-linecap="round" opacity=".7"/><line x1="323.2" y1="134.2" x2="-943.3" y2="356.2" stroke="#B4441E" stroke-width="7" stroke-linecap="round"/><line x1="323.2" y1="134.2" x2="-943.3" y2="356.2" stroke="#FF8A4C" stroke-width="2.3" stroke-linecap="round" opacity=".7"/><line x1="320.8" y1="131.1" x2="23.9" y2="480.0" stroke="#B4441E" stroke-width="5" stroke-linecap="round"/><line x1="320.8" y1="131.1" x2="23.9" y2="480.0" stroke="#FF8A4C" stroke-width="1.7" stroke-linecap="round" opacity=".7"/><line x1="320.0" y1="128.0" x2="20.0" y2="470.0" stroke="#B4441E" stroke-width="5" stroke-linecap="round"/><line x1="320.0" y1="128.0" x2="20.0" y2="470.0" stroke="#FF8A4C" stroke-width="1.7" stroke-linecap="round" opacity=".7"/><line x1="320.8" y1="124.9" x2="23.9" y2="460.0" stroke="#B4441E" stroke-width="5" stroke-linecap="round"/><line x1="320.8" y1="124.9" x2="23.9" y2="460.0" stroke="#FF8A4C" stroke-width="1.7" stroke-linecap="round" opacity=".7"/><line x1="323.2" y1="121.8" x2="35.4" y2="450.3" stroke="#B4441E" stroke-width="5" stroke-linecap="round"/><line x1="323.2" y1="121.8" x2="35.4" y2="450.3" stroke="#FF8A4C" stroke-width="1.7" stroke-linecap="round" opacity=".7"/><line x1="327.2" y1="118.9" x2="54.3" y2="440.9" stroke="#B4441E" stroke-width="5" stroke-linecap="round"/><line x1="327.2" y1="118.9" x2="54.3" y2="440.9" stroke="#FF8A4C" stroke-width="1.7" stroke-linecap="round" opacity=".7"/><line x1="332.7" y1="116.1" x2="80.3" y2="432.2" stroke="#B4441E" stroke-width="5" stroke-linecap="round"/><line x1="332.7" y1="116.1" x2="80.3" y2="432.2" stroke="#FF8A4C" stroke-width="1.7" stroke-linecap="round" opacity=".7"/><line x1="339.5" y1="113.6" x2="112.8" y2="424.2" stroke="#B4441E" stroke-width="5" stroke-linecap="round"/><line x1="339.5" y1="113.6" x2="112.8" y2="424.2" stroke="#FF8A4C" stroke-width="1.7" stroke-linecap="round" opacity=".7"/><line x1="347.6" y1="111.4" x2="151.2" y2="417.1" stroke="#B4441E" stroke-width="5" stroke-linecap="round"/><line x1="347.6" y1="111.4" x2="151.2" y2="417.1" stroke="#FF8A4C" stroke-width="1.7" stroke-linecap="round" opacity=".7"/><line x1="356.7" y1="109.5" x2="194.6" y2="411.1" stroke="#B4441E" stroke-width="5" stroke-linecap="round"/><line x1="356.7" y1="109.5" x2="194.6" y2="411.1" stroke="#FF8A4C" stroke-width="1.7" stroke-linecap="round" opacity=".7"/><line x1="366.8" y1="108.0" x2="242.1" y2="406.3" stroke="#B4441E" stroke-width="5" stroke-linecap="round"/><line x1="366.8" y1="108.0" x2="242.1" y2="406.3" stroke="#FF8A4C" stroke-width="1.7" stroke-linecap="round" opacity=".7"/><line x1="377.5" y1="106.9" x2="292.9" y2="402.8" stroke="#B4441E" stroke-width="5" stroke-linecap="round"/><line x1="377.5" y1="106.9" x2="292.9" y2="402.8" stroke="#FF8A4C" stroke-width="1.7" stroke-linecap="round" opacity=".7"/><line x1="388.6" y1="106.2" x2="345.9" y2="400.7" stroke="#B4441E" stroke-width="5" stroke-linecap="round"/><line x1="388.6" y1="106.2" x2="345.9" y2="400.7" stroke="#FF8A4C" stroke-width="1.7" stroke-linecap="round" opacity=".7"/><line x1="400.0" y1="106.0" x2="400.0" y2="400.0" stroke="#B4441E" stroke-width="5" stroke-linecap="round"/><line x1="400.0" y1="106.0" x2="400.0" y2="400.0" stroke="#FF8A4C" stroke-width="1.7" stroke-linecap="round" opacity=".7"/><line x1="411.4" y1="106.2" x2="454.1" y2="400.7" stroke="#B4441E" stroke-width="5" stroke-linecap="round"/><line x1="411.4" y1="106.2" x2="454.1" y2="400.7" stroke="#FF8A4C" stroke-width="1.7" stroke-linecap="round" opacity=".7"/><line x1="422.5" y1="106.9" x2="507.1" y2="402.8" stroke="#B4441E" stroke-width="5" stroke-linecap="round"/><line x1="422.5" y1="106.9" x2="507.1" y2="402.8" stroke="#FF8A4C" stroke-width="1.7" stroke-linecap="round" opacity=".7"/><line x1="433.2" y1="108.0" x2="557.9" y2="406.3" stroke="#B4441E" stroke-width="5" stroke-linecap="round"/><line x1="433.2" y1="108.0" x2="557.9" y2="406.3" stroke="#FF8A4C" stroke-width="1.7" stroke-linecap="round" opacity=".7"/><line x1="443.3" y1="109.5" x2="605.4" y2="411.1" stroke="#B4441E" stroke-width="5" stroke-linecap="round"/><line x1="443.3" y1="109.5" x2="605.4" y2="411.1" stroke="#FF8A4C" stroke-width="1.7" stroke-linecap="round" opacity=".7"/><line x1="452.4" y1="111.4" x2="648.8" y2="417.1" stroke="#B4441E" stroke-width="5" stroke-linecap="round"/><line x1="452.4" y1="111.4" x2="648.8" y2="417.1" stroke="#FF8A4C" stroke-width="1.7" stroke-linecap="round" opacity=".7"/><line x1="460.5" y1="113.6" x2="687.2" y2="424.2" stroke="#B4441E" stroke-width="5" stroke-linecap="round"/><line x1="460.5" y1="113.6" x2="687.2" y2="424.2" stroke="#FF8A4C" stroke-width="1.7" stroke-linecap="round" opacity=".7"/><line x1="467.3" y1="116.1" x2="719.7" y2="432.2" stroke="#B4441E" stroke-width="5" stroke-linecap="round"/><line x1="467.3" y1="116.1" x2="719.7" y2="432.2" stroke="#FF8A4C" stroke-width="1.7" stroke-linecap="round" opacity=".7"/><line x1="472.8" y1="118.9" x2="745.7" y2="440.9" stroke="#B4441E" stroke-width="5" stroke-linecap="round"/><line x1="472.8" y1="118.9" x2="745.7" y2="440.9" stroke="#FF8A4C" stroke-width="1.7" stroke-linecap="round" opacity=".7"/><line x1="476.8" y1="121.8" x2="764.6" y2="450.3" stroke="#B4441E" stroke-width="5" stroke-linecap="round"/><line x1="476.8" y1="121.8" x2="764.6" y2="450.3" stroke="#FF8A4C" stroke-width="1.7" stroke-linecap="round" opacity=".7"/><line x1="479.2" y1="124.9" x2="776.1" y2="460.0" stroke="#B4441E" stroke-width="5" stroke-linecap="round"/><line x1="479.2" y1="124.9" x2="776.1" y2="460.0" stroke="#FF8A4C" stroke-width="1.7" stroke-linecap="round" opacity=".7"/>
+<path d="M60 420 A350 64 0 0 1 740 420" fill="none" stroke="#3E7BD6" stroke-width="10" stroke-dasharray="2 18" opacity=".8"/></g>
+<path class="rays" d="M330 140 L470 140 L620 820 L180 820 Z" fill="url(#ray)" opacity=".55" pointer-events="none"/>
+<g class="hot det" data-go="shanyraq" tabindex="0" role="link" aria-label="Шаңырақ — сынып жетекшісі">
+<ellipse cx="400" cy="128" rx="88" ry="27" fill="#7A3B12"/><ellipse cx="400" cy="128" rx="78" ry="21" fill="url(#sky)"/>
+<g class="cl2" fill="#fff" opacity=".9"><ellipse cx="370" cy="124" rx="18" ry="5"/><ellipse cx="430" cy="132" rx="14" ry="4"/></g>
+<g stroke="#9A2E12" stroke-width="7" stroke-linecap="round"><line x1="326.0" y1="128.0" x2="474.0" y2="128.0"/><line x1="400.0" y1="108.0" x2="400.0" y2="148.0"/><line x1="335.1" y1="118.4" x2="464.9" y2="137.6"/><line x1="335.1" y1="137.6" x2="464.9" y2="118.4"/><line x1="366.4" y1="110.2" x2="433.6" y2="145.8"/><line x1="366.4" y1="145.8" x2="433.6" y2="110.2"/></g><g stroke="#FFB067" stroke-width="2"><line x1="326.0" y1="128.0" x2="474.0" y2="128.0"/><line x1="400.0" y1="108.0" x2="400.0" y2="148.0"/><line x1="335.1" y1="118.4" x2="464.9" y2="137.6"/><line x1="335.1" y1="137.6" x2="464.9" y2="118.4"/><line x1="366.4" y1="110.2" x2="433.6" y2="145.8"/><line x1="366.4" y1="145.8" x2="433.6" y2="110.2"/></g>
+<ellipse cx="400" cy="128" rx="80" ry="23" fill="none" stroke="url(#igd)" stroke-width="7"/></g>
+<g class="hot det" data-go="kerege" tabindex="0" role="link" aria-label="Кереге — ата-аналар">
+<path d="M20 470 A380 70 0 0 1 780 470 L780 800 A380 90 0 0 0 20 800 Z" fill="url(#wallin)"/>
+<path d="M20 470 A380 70 0 0 1 780 470 L780 800 A380 90 0 0 0 20 800 Z" fill="url(#latin)" opacity=".9"/>
+<path d="M20 470 A380 70 0 0 1 780 470 L780 800 A380 90 0 0 0 20 800 Z" fill="none" stroke="#7A3B12" stroke-width="4"/>
+<path d="M20 470 L-400 380 L-400 1000 L20 800 Z" fill="url(#wallin)"/><path d="M20 470 L-400 380 L-400 1000 L20 800 Z" fill="url(#latin)"/><path d="M20 470 L-400 380 L-400 1000 L20 800 Z" fill="#000" opacity=".18"/>
+<path d="M780 470 L1200 380 L1200 1000 L780 800 Z" fill="url(#wallin)"/><path d="M780 470 L1200 380 L1200 1000 L780 800 Z" fill="url(#latin)"/><path d="M780 470 L1200 380 L1200 1000 L780 800 Z" fill="#000" opacity=".22"/>
+<path d="M20 470 L-400 380 M780 470 L1200 380" stroke="#12347A" stroke-width="22"/></g>
+<g class="hot det" data-go="baskur" tabindex="0" role="link" aria-label="Баскұр — құндылықтар">
+<path d="M20 470 A380 70 0 0 1 780 470 L780 498 A380 70 0 0 0 20 498 Z" fill="#12347A"/>
+<path d="M20 474 A380 70 0 0 1 780 474 L780 494 A380 70 0 0 0 20 494 Z" fill="url(#oyy)"/>
+<path d="M20 500 A380 70 0 0 1 780 500" fill="none" stroke="#E11D48" stroke-width="5"/>
+<g><path d="M39 483.1 l-6 0 l6 22 l6 -22z" fill="#FF4D5E"/><path d="M77 468.1 l-6 0 l6 22 l6 -22z" fill="#F5A300"/><path d="M115 458.7 l-6 0 l6 22 l6 -22z" fill="#10B981"/><path d="M153 451.8 l-6 0 l6 22 l6 -22z" fill="#00B8D9"/><path d="M191 446.5 l-6 0 l6 22 l6 -22z" fill="#8B5CF6"/><path d="M229 442.5 l-6 0 l6 22 l6 -22z" fill="#FF3EA5"/><path d="M267 439.4 l-6 0 l6 22 l6 -22z" fill="#FF4D5E"/><path d="M305 437.2 l-6 0 l6 22 l6 -22z" fill="#F5A300"/><path d="M343 435.8 l-6 0 l6 22 l6 -22z" fill="#10B981"/><path d="M381 435.1 l-6 0 l6 22 l6 -22z" fill="#00B8D9"/><path d="M419 435.1 l-6 0 l6 22 l6 -22z" fill="#8B5CF6"/><path d="M457 435.8 l-6 0 l6 22 l6 -22z" fill="#FF3EA5"/><path d="M495 437.2 l-6 0 l6 22 l6 -22z" fill="#FF4D5E"/><path d="M533 439.4 l-6 0 l6 22 l6 -22z" fill="#F5A300"/><path d="M571 442.5 l-6 0 l6 22 l6 -22z" fill="#10B981"/><path d="M609 446.5 l-6 0 l6 22 l6 -22z" fill="#00B8D9"/><path d="M647 451.8 l-6 0 l6 22 l6 -22z" fill="#8B5CF6"/><path d="M685 458.7 l-6 0 l6 22 l6 -22z" fill="#FF3EA5"/><path d="M723 468.1 l-6 0 l6 22 l6 -22z" fill="#FF4D5E"/><path d="M761 483.1 l-6 0 l6 22 l6 -22z" fill="#F5A300"/></g></g>
+<g class="hot det" data-go="oyyn" tabindex="0" role="link" aria-label="Текемет пен асық — ойын">
+<path d="M20 800 A380 90 0 0 1 780 800 L1200 1000 L1200 1300 L-400 1300 L-400 1000 Z" fill="#8B2E12"/>
+<g clip-path="url(#floorclip)"><ellipse cx="400" cy="935" rx="600" ry="150" fill="#B91C1C"/><ellipse cx="400" cy="935" rx="586" ry="144" fill="url(#oyw)" opacity="0.55"/><ellipse cx="400" cy="935" rx="470" ry="118" fill="#1E3A8A"/><ellipse cx="400" cy="935" rx="456" ry="112" fill="url(#oyw)" opacity="0.55"/><ellipse cx="400" cy="935" rx="360" ry="90" fill="#F8F4EC"/><ellipse cx="400" cy="935" rx="346" ry="84" fill="url(#oyy)" opacity="0.0"/><ellipse cx="400" cy="935" rx="250" ry="62" fill="#B91C1C"/><ellipse cx="400" cy="935" rx="236" ry="56" fill="url(#oyw)" opacity="0.55"/><ellipse cx="400" cy="935" rx="150" ry="38" fill="#1E3A8A"/><ellipse cx="400" cy="935" rx="136" ry="32" fill="url(#oyw)" opacity="0.55"/><path d="M20 800 A380 90 0 0 0 780 800" fill="none" stroke="#5B1A08" stroke-width="6"/></g><g transform="rotate(-20 560 960)"><path d="M547 954 q13-7 26 0 q5 6 0 12 q-13 7 -26 0 q-5 -6 0 -12Z" fill="#FFD23F" stroke="#fff" stroke-width="2"/></g><g transform="rotate(15 592 972)"><path d="M579 966 q13-7 26 0 q5 6 0 12 q-13 7 -26 0 q-5 -6 0 -12Z" fill="#00B8D9" stroke="#fff" stroke-width="2"/></g><g transform="rotate(40 575 995)"><path d="M562 989 q13-7 26 0 q5 6 0 12 q-13 7 -26 0 q-5 -6 0 -12Z" fill="#FF3EA5" stroke="#fff" stroke-width="2"/></g></g>
+<g class="hot det" data-go="tor" tabindex="0" role="link" aria-label="Тұскиіз — жетістіктер">
+<path d="M70 520 L210 500 L214 690 L76 712 Z" fill="#141A3C" filter="url(#isoft)"/>
+<path d="M80 530 L204 512 L207 682 L85 701 Z" fill="none" stroke="#FFD23F" stroke-width="3"/>
+<g fill="none" stroke-width="5" stroke-linecap="round"><path d="M110 600 q30 -40 60 0 q-30 40 -60 0Z" stroke="#FF3EA5"/><path d="M140 560 v80 M100 600 h80" stroke="#10B981"/></g>
+<circle cx="140" cy="600" r="12" fill="#FFD23F"/><path class="star2" d="M140 588 l3 8 9 1 -7 6 2 9 -7-5 -7 5 2-9 -7-6 9-1Z" fill="#fff"/>
+<g fill="#F5A300"><rect x="82" y="704.0" width="5" height="20" rx="2"/><rect x="98" y="701.7" width="5" height="20" rx="2"/><rect x="114" y="699.4" width="5" height="20" rx="2"/><rect x="130" y="697.1" width="5" height="20" rx="2"/><rect x="146" y="694.8" width="5" height="20" rx="2"/><rect x="162" y="692.5" width="5" height="20" rx="2"/><rect x="178" y="690.2" width="5" height="20" rx="2"/><rect x="194" y="687.9" width="5" height="20" rx="2"/></g></g>
+<g class="hot det" data-go="esik" tabindex="0" role="link" aria-label="Асадал — құралдар">
+<path d="M228 640 L318 632 L318 760 L228 770 Z" fill="#9A3412" filter="url(#isoft)"/>
+<path d="M234 650 L312 643 L312 752 L234 760 Z" fill="#FDE6C3"/>
+<path d="M234 700 L312 694" stroke="#9A3412" stroke-width="5"/>
+<ellipse cx="256" cy="690" rx="14" ry="6" fill="#00B8D9"/><ellipse cx="290" cy="687" rx="14" ry="6" fill="#FF4D5E"/>
+<path d="M246 742 q12 -16 24 0Z" fill="#F5A300"/><path d="M280 740 q12 -16 24 0Z" fill="#10B981"/>
+<path d="M226 640 L273 620 L320 632" fill="none" stroke="url(#igd)" stroke-width="5"/></g>
+<g class="hot det" data-go="sandyq" tabindex="0" role="link" aria-label="Жүк пен сандық — туған күндер">
+<rect x="338" y="620" width="124" height="18" rx="8" fill="#E11D48" stroke="#fff" stroke-width="1.5"/><rect x="344" y="626" width="112" height="6" fill="url(#oyw)" opacity=".7"/><rect x="337" y="602" width="126" height="18" rx="8" fill="#F5A300" stroke="#fff" stroke-width="1.5"/><rect x="343" y="608" width="114" height="6" fill="url(#oyw)" opacity=".7"/><rect x="336" y="584" width="128" height="18" rx="8" fill="#00B8D9" stroke="#fff" stroke-width="1.5"/><rect x="342" y="590" width="116" height="6" fill="url(#oyw)" opacity=".7"/><rect x="335" y="566" width="130" height="18" rx="8" fill="#8B5CF6" stroke="#fff" stroke-width="1.5"/><rect x="341" y="572" width="118" height="6" fill="url(#oyw)" opacity=".7"/><rect x="334" y="548" width="132" height="18" rx="8" fill="#10B981" stroke="#fff" stroke-width="1.5"/><rect x="340" y="554" width="120" height="6" fill="url(#oyw)" opacity=".7"/>
+<rect x="330" y="640" width="140" height="92" rx="6" fill="url(#i-sandyq)" filter="url(#isoft)"/>
+<rect x="340" y="650" width="120" height="72" rx="6" fill="url(#oyy)" opacity=".85"/>
+<path d="M330 664 h140" stroke="url(#igd)" stroke-width="5"/><circle cx="400" cy="690" r="10" fill="url(#igd)" stroke="#fff" stroke-width="2"/>
+<rect x="336" y="732" width="10" height="16" fill="#7A3B12"/><rect x="454" y="732" width="10" height="16" fill="#7A3B12"/></g>
+<g class="hot det" data-go="ereje" tabindex="0" role="link" aria-label="Кебеже — сынып жетекшісінің ережесі">
+<path d="M500 664 L600 670 L600 752 L500 746 Z" fill="url(#i-ereje)" filter="url(#isoft)"/>
+<path d="M500 664 L520 650 L618 656 L600 670 Z" fill="#FDBA74"/><path d="M600 670 L618 656 L618 738 L600 752 Z" fill="#9A3412"/>
+<path d="M512 676 L590 681 L590 740 L512 735 Z" fill="url(#oyw)" opacity=".9"/>
+<rect x="503" y="746" width="8" height="18" fill="#7A3B12"/><rect x="590" y="752" width="8" height="18" fill="#7A3B12"/>
+<path d="M536 640 l26 2 l0 -30 l-26 -2 z" fill="#fff" stroke="#C2410C" stroke-width="2"/><path d="M541 618 h16 M541 625 h16 M541 632 h10" stroke="#C2410C" stroke-width="2"/></g>
+<g class="hot det" data-go="zhoba" tabindex="0" role="link" aria-label="Домбыра — жобалар">
+<g transform="rotate(-28 690 600)"><ellipse cx="690" cy="660" rx="30" ry="42" fill="#B45309" filter="url(#isoft)"/><ellipse cx="690" cy="660" rx="22" ry="32" fill="#F59E0B"/><circle cx="690" cy="650" r="6" fill="#7A3B12"/>
+<rect x="685" y="500" width="10" height="130" rx="4" fill="#7A3B12"/><rect x="682" y="490" width="16" height="22" rx="4" fill="#2F80FF"/>
+<path d="M688 505 L688 690 M692 505 L692 690" stroke="#FFF6C8" stroke-width="1.2"/></g>
+<path d="M650 545 q18 -10 34 2" fill="none" stroke="#E11D48" stroke-width="3"/></g>
+
+<g class="hot det" data-go="bailanys" tabindex="0" role="link" aria-label="Дастархан — кері байланыс">
+<ellipse cx="400" cy="905" rx="150" ry="40" fill="#5B1A08" opacity=".35"/>
+<path d="M300 880 L300 905 A100 26 0 0 0 500 905 L500 880 Z" fill="#7A3B12"/>
+<ellipse cx="400" cy="880" rx="100" ry="26" fill="url(#i-bailanys)" filter="url(#isoft)"/>
+<ellipse cx="400" cy="880" rx="86" ry="20" fill="url(#oyw)" opacity=".7"/>
+<ellipse cx="350" cy="876" rx="16" ry="6" fill="#fff"/><ellipse cx="350" cy="874" rx="10" ry="3.5" fill="#B45309"/>
+<ellipse cx="450" cy="878" rx="16" ry="6" fill="#fff"/><ellipse cx="450" cy="876" rx="10" ry="3.5" fill="#F8F4EC"/>
+<circle cx="406" cy="880" r="5" fill="#F59E0B" stroke="#B45309"/><circle cx="399" cy="884" r="5" fill="#F59E0B" stroke="#B45309"/><circle cx="385" cy="884" r="5" fill="#F59E0B" stroke="#B45309"/><circle cx="378" cy="880" r="5" fill="#F59E0B" stroke="#B45309"/><circle cx="385" cy="876" r="5" fill="#F59E0B" stroke="#B45309"/><circle cx="399" cy="876" r="5" fill="#F59E0B" stroke="#B45309"/><path class="tea" d="M350 868 q-4 -10 0 -18 q4 -8 0 -16" stroke="#fff" stroke-width="3" fill="none" opacity=".8"/></g>
+<g class="hot det" data-go="qalqan" tabindex="0" role="link" aria-label="Бесік — қауіпсіздік">
+<g class="rock" style="transform-origin:665px 1000px">
+<ellipse cx="665" cy="1000" rx="70" ry="12" fill="#5B1A08" opacity=".35"/>
+<path d="M600 990 q65 26 130 0" fill="none" stroke="#7A3B12" stroke-width="10" stroke-linecap="round"/>
+<path d="M610 930 L720 930 L712 980 L618 980 Z" fill="url(#i-qalqan)" filter="url(#isoft)"/>
+<path d="M616 940 L714 940 L708 972 L622 972 Z" fill="url(#oyw)" opacity=".8"/>
+<path d="M612 930 q53 -70 106 0" fill="none" stroke="#F59E0B" stroke-width="8" stroke-linecap="round"/>
+<path d="M630 930 q35 -45 70 0" fill="none" stroke="#F59E0B" stroke-width="5" stroke-linecap="round"/>
+<path d="M618 980 L612 996 M712 980 L718 996" stroke="#7A3B12" stroke-width="7"/>
+<path d="M630 932 q35 -10 70 0 l-4 12 q-31 8 -62 0Z" fill="#FFE08A"/></g></g>
+<g class="hot tag" data-go="shanyraq" data-x="400" tabindex="-1" aria-hidden="true" style="--d:0.00s">
+<line x1="400" y1="128" x2="400" y2="40" stroke="#fff" stroke-width="3" stroke-dasharray="3 5"/>
+<circle class="ping" cx="400" cy="128" r="7" fill="#F5A300" stroke="#fff" stroke-width="3"/>
+<g class="bob"><rect class="bx" x="311" y="11.0" width="178" height="58" rx="29" fill="url(#i-shanyraq)" stroke="#fff" stroke-width="3" filter="url(#isoft)"/>
+<circle class="bc" cx="340" cy="40" r="19" fill="#fff"/><text x="340" y="41" class="num" fill="#FF7A00" text-anchor="middle" dominant-baseline="middle">1</text>
+<text x="367" y="36" class="tt">Шаңырақ</text><text x="367" y="57" class="ts">ұстаз</text></g></g>
+<g class="hot tag" data-go="uyq" data-x="150" tabindex="-1" aria-hidden="true" style="--d:0.21s">
+<line x1="215" y1="300" x2="150" y2="250" stroke="#fff" stroke-width="3" stroke-dasharray="3 5"/>
+<circle class="ping" cx="215" cy="300" r="7" fill="#00B8D9" stroke="#fff" stroke-width="3"/>
+<g class="bob"><rect class="bx" x="68" y="221.0" width="163" height="58" rx="29" fill="url(#i-uyq)" stroke="#fff" stroke-width="3" filter="url(#isoft)"/>
+<circle class="bc" cx="98" cy="250" r="19" fill="#fff"/><text x="98" y="251" class="num" fill="#0077FF" text-anchor="middle" dominant-baseline="middle">2</text>
+<text x="124" y="246" class="tt">Уықтар</text><text x="124" y="267" class="ts">22 оқушы</text></g></g>
+<g class="hot tag" data-go="baskur" data-x="640" tabindex="-1" aria-hidden="true" style="--d:0.42s">
+<line x1="620" y1="455" x2="640" y2="395" stroke="#fff" stroke-width="3" stroke-dasharray="3 5"/>
+<circle class="ping" cx="620" cy="455" r="7" fill="#10B981" stroke="#fff" stroke-width="3"/>
+<g class="bob"><rect class="bx" x="558" y="366.0" width="165" height="58" rx="29" fill="url(#i-baskur)" stroke="#fff" stroke-width="3" filter="url(#isoft)"/>
+<circle class="bc" cx="587" cy="395" r="19" fill="#fff"/><text x="587" y="396" class="num" fill="#0EA5A4" text-anchor="middle" dominant-baseline="middle">3</text>
+<text x="614" y="391" class="tt">Баскұр</text><text x="614" y="412" class="ts">құндылықтар</text></g></g>
+<g class="hot tag" data-go="kerege" data-x="680" tabindex="-1" aria-hidden="true" style="--d:0.63s">
+<line x1="750" y1="700" x2="680" y2="790" stroke="#fff" stroke-width="3" stroke-dasharray="3 5"/>
+<circle class="ping" cx="750" cy="700" r="7" fill="#FF7A00" stroke="#fff" stroke-width="3"/>
+<g class="bob"><rect class="bx" x="598" y="761.0" width="163" height="58" rx="29" fill="url(#i-kerege)" stroke="#fff" stroke-width="3" filter="url(#isoft)"/>
+<circle class="bc" cx="628" cy="790" r="19" fill="#fff"/><text x="628" y="791" class="num" fill="#FF4D5E" text-anchor="middle" dominant-baseline="middle">4</text>
+<text x="654" y="786" class="tt">Кереге</text><text x="654" y="807" class="ts">ата-ана</text></g></g>
+<g class="hot tag" data-go="tor" data-x="140" tabindex="-1" aria-hidden="true" style="--d:0.84s">
+<line x1="140" y1="530" x2="140" y2="445" stroke="#fff" stroke-width="3" stroke-dasharray="3 5"/>
+<circle class="ping" cx="140" cy="530" r="7" fill="#8B5CF6" stroke="#fff" stroke-width="3"/>
+<g class="bob"><rect class="bx" x="51" y="416.0" width="178" height="58" rx="29" fill="url(#i-tor)" stroke="#fff" stroke-width="3" filter="url(#isoft)"/>
+<circle class="bc" cx="80" cy="445" r="19" fill="#fff"/><text x="80" y="446" class="num" fill="#5B3CF0" text-anchor="middle" dominant-baseline="middle">5</text>
+<text x="107" y="441" class="tt">Тұскиіз</text><text x="107" y="462" class="ts">жетістіктер</text></g></g>
+<g class="hot tag" data-go="esik" data-x="190" tabindex="-1" aria-hidden="true" style="--d:1.05s">
+<line x1="270" y1="720" x2="190" y2="820" stroke="#fff" stroke-width="3" stroke-dasharray="3 5"/>
+<circle class="ping" cx="270" cy="720" r="7" fill="#FF4D5E" stroke="#fff" stroke-width="3"/>
+<g class="bob"><rect class="bx" x="108" y="791.0" width="163" height="58" rx="29" fill="url(#i-esik)" stroke="#fff" stroke-width="3" filter="url(#isoft)"/>
+<circle class="bc" cx="138" cy="820" r="19" fill="#fff"/><text x="138" y="821" class="num" fill="#FF8A00" text-anchor="middle" dominant-baseline="middle">6</text>
+<text x="164" y="816" class="tt">Асадал</text><text x="164" y="837" class="ts">құралдар</text></g></g>
+<g class="hot tag" data-go="sandyq" data-x="400" tabindex="-1" aria-hidden="true" style="--d:1.26s">
+<line x1="400" y1="600" x2="400" y2="535" stroke="#fff" stroke-width="3" stroke-dasharray="3 5"/>
+<circle class="ping" cx="400" cy="600" r="7" fill="#FF3EA5" stroke="#fff" stroke-width="3"/>
+<g class="bob"><rect class="bx" x="272" y="506.0" width="256" height="58" rx="29" fill="url(#i-sandyq)" stroke="#fff" stroke-width="3" filter="url(#isoft)"/>
+<circle class="bc" cx="301" cy="535" r="19" fill="#fff"/><text x="301" y="536" class="num" fill="#B23CFF" text-anchor="middle" dominant-baseline="middle">7</text>
+<text x="328" y="531" class="tt">Жүк · сандық</text><text x="328" y="552" class="ts">туған күндер</text></g></g>
+<g class="hot tag" data-go="ereje" data-x="580" tabindex="-1" aria-hidden="true" style="--d:1.47s">
+<line x1="560" y1="640" x2="580" y2="580" stroke="#fff" stroke-width="3" stroke-dasharray="3 5"/>
+<circle class="ping" cx="560" cy="640" r="7" fill="#C2410C" stroke="#fff" stroke-width="3"/>
+<g class="bob"><rect class="bx" x="485" y="551.0" width="190" height="58" rx="29" fill="url(#i-ereje)" stroke="#fff" stroke-width="3" filter="url(#isoft)"/>
+<circle class="bc" cx="514" cy="580" r="19" fill="#fff"/><text x="514" y="581" class="num" fill="#F59E0B" text-anchor="middle" dominant-baseline="middle">8</text>
+<text x="541" y="576" class="tt">Кебеже</text><text x="541" y="597" class="ts">ереже · жоспар</text></g></g>
+<g class="hot tag" data-go="zhoba" data-x="700" tabindex="-1" aria-hidden="true" style="--d:1.68s">
+<line x1="700" y1="600" x2="700" y2="500" stroke="#fff" stroke-width="3" stroke-dasharray="3 5"/>
+<circle class="ping" cx="700" cy="600" r="7" fill="#2F80FF" stroke="#fff" stroke-width="3"/>
+<g class="bob"><rect class="bx" x="611" y="471.0" width="178" height="58" rx="29" fill="url(#i-zhoba)" stroke="#fff" stroke-width="3" filter="url(#isoft)"/>
+<circle class="bc" cx="640" cy="500" r="19" fill="#fff"/><text x="640" y="501" class="num" fill="#00B8D9" text-anchor="middle" dominant-baseline="middle">9</text>
+<text x="667" y="496" class="tt">Домбыра</text><text x="667" y="517" class="ts">жобалар</text></g></g>
+<g class="hot tag" data-go="bailanys" data-x="430" tabindex="-1" aria-hidden="true" style="--d:1.89s">
+<line x1="420" y1="870" x2="430" y2="800" stroke="#fff" stroke-width="3" stroke-dasharray="3 5"/>
+<circle class="ping" cx="420" cy="870" r="7" fill="#E11D48" stroke="#fff" stroke-width="3"/>
+<g class="bob"><rect class="bx" x="325" y="771.0" width="210" height="58" rx="29" fill="url(#i-bailanys)" stroke="#fff" stroke-width="3" filter="url(#isoft)"/>
+<circle class="bc" cx="354" cy="800" r="19" fill="#fff"/><text x="354" y="801" class="num" fill="#FF3EA5" text-anchor="middle" dominant-baseline="middle">10</text>
+<text x="381" y="796" class="tt">Дастархан</text><text x="381" y="817" class="ts">кері байланыс</text></g></g>
+<g class="hot tag" data-go="oyyn" data-x="360" tabindex="-1" aria-hidden="true" style="--d:2.10s">
+<line x1="560" y1="962" x2="360" y2="1028" stroke="#fff" stroke-width="3" stroke-dasharray="3 5"/>
+<circle class="ping" cx="560" cy="962" r="7" fill="#D946EF" stroke="#fff" stroke-width="3"/>
+<g class="bob"><rect class="bx" x="271" y="999.0" width="178" height="58" rx="29" fill="url(#i-oyyn)" stroke="#fff" stroke-width="3" filter="url(#isoft)"/>
+<circle class="bc" cx="300" cy="1028" r="19" fill="#fff"/><text x="300" y="1029" class="num" fill="#FF3EA5" text-anchor="middle" dominant-baseline="middle">11</text>
+<text x="327" y="1024" class="tt">Текемет</text><text x="327" y="1045" class="ts">асық · ойын</text></g></g>
+<g class="hot tag" data-go="qalqan" data-x="680" tabindex="-1" aria-hidden="true" style="--d:2.31s">
+<line x1="665" y1="960" x2="680" y2="1028" stroke="#fff" stroke-width="3" stroke-dasharray="3 5"/>
+<circle class="ping" cx="665" cy="960" r="7" fill="#5B5BF0" stroke="#fff" stroke-width="3"/>
+<g class="bob"><rect class="bx" x="598" y="999.0" width="165" height="58" rx="29" fill="url(#i-qalqan)" stroke="#fff" stroke-width="3" filter="url(#isoft)"/>
+<circle class="bc" cx="627" cy="1028" r="19" fill="#fff"/><text x="627" y="1029" class="num" fill="#2F80FF" text-anchor="middle" dominant-baseline="middle">12</text>
+<text x="654" y="1024" class="tt">Бесік</text><text x="654" y="1045" class="ts">қауіпсіздік</text></g></g>
+</svg></div>
+</div>
+<div id="bar" role="toolbar" aria-label="Кабинет"><button class="home" id="home">← Киіз үйге</button><div class="ttl" id="ttl"></div><button class="nx" id="prv" aria-label="Алдыңғы кабинет">‹</button><button class="nx" id="nxt" aria-label="Келесі кабинет">›</button></div>
+<main>
+<section id="shanyraq" class="room" style="--c:#F5A300;--c2:#FF7A00" tabindex="-1">
+  <div class="head"><div class="medal"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15" fill="none" stroke="#fff" stroke-width="3"/><path d="M5 20h30M20 5v30M9 9l22 22M31 9L9 31" stroke="#fff" stroke-width="2.5"/></svg></div>
+  <div><div class="kick">Шаңырақ — үйдің жүрегі</div><h2>Сынып жетекшісі</h2></div></div>
+  <div class="card" style="display:flex;gap:18px;align-items:center;flex-wrap:wrap">
+    <div style="width:84px;height:84px;border-radius:50%;background:var(--gold);display:grid;place-items:center;font-family:var(--display);font-size:30px;color:#fff">М</div>
+    <div><h3 style="font-size:22px">Женисова Макпал Канатовна</h3>
+    <p style="margin:4px 0">Бастауыш сынып мұғалімі, 4 «В» сыныбының жетекшісі · 233-кабинет</p>
+    <p style="margin:0 0 6px"><span class="pill">педагог-зерттеуші</span> <span class="pill">магистр</span> <span class="pill">WorldSkills сарапшысы</span></p>
+    <p style="margin:0;color:var(--muted)">«[Ұстаздың ұраны: тәрбие туралы бір сөйлем]»</p></div>
+  </div>
+  <div class="grid" style="margin-top:14px">
+    <div class="card"><span class="pill">2026</span><h3 style="font-size:16px;margin:8px 0 4px">«Педстарт» — I дәреже</h3><p style="margin:0;color:var(--muted)">Бастауыш сынып мұғалімдеріне арналған республикалық математика олимпиадасы («Дарын» РҒПО)</p></div>
+    <div class="card"><span class="pill">2024</span><h3 style="font-size:16px;margin:8px 0 4px">WorldSkills Astana — 2024</h3><p style="margin:0;color:var(--muted)">«Кіші сыныптарда оқыту» құзыреті бойынша тәуелсіз сарапшы</p></div>
+    <div class="card"><span class="pill">Кітап</span><h3 style="font-size:16px;margin:8px 0 4px">«Математика және логика. 3 сынып»</h3><p style="margin:0;color:var(--muted)">Оқу құралының тең авторы (Н.А. Исмайловамен бірге)</p></div>
+    <div class="card"><span class="pill">2023</span><h3 style="font-size:16px;margin:8px 0 4px">Ата-аналарды ағарту курсы</h3><p style="margin:0;color:var(--muted)">«Ата-аналарды психологиялық-педагогикалық ағартудың ғылыми-әдістемелік негіздері», 80 сағат</p></div>
+  </div>
+  <div class="card" style="margin-top:14px"><h3 style="font-size:16px;margin:0 0 6px">Ұстаздың бұрынғы шәкірттері (№76 мектеп-лицей)</h3>
+    <p style="margin:0;color:var(--muted)">«Іліяс оқулары» республикалық конкурсы — I орын (2 оқушы, 2023) · «Ақбота» зияткерлік олимпиадасы — II дәреже (2023) · «Кенгуру» ойын-конкурсы — III дәреже (2 оқушы, 2023) · «Ақбота» марафоны — I дәреже (2020)</p></div>
+</section>
+
+<section id="uyq" class="room" style="--c:#00B8D9;--c2:#0077FF" tabindex="-1">
+  <div class="head"><div class="medal"><svg viewBox="0 0 40 40"><path d="M4 36L20 4l16 32M12 36L20 4l8 32" fill="none" stroke="#fff" stroke-width="3"/></svg></div>
+  <div><div class="kick">Уықтар — шаңырақты бірге көтереді</div><h2>Біздің 22 оқушы</h2></div></div>
+  <p class="lead">Шаңыраққа жоғарыдан қараңыз: әр уық — бір оқушы. Уықты басып, оқушының жетістіктерін көріңіз. 11 қыз, 11 ұл.</p>
+  <div class="top">
+    <svg id="topview" viewBox="-45 -45 610 610" role="img" aria-label="Шаңырақ жоғарыдан: 22 уық"></svg>
+    <div class="card kid" id="kidcard"><span class="pill">Уықты басыңыз</span><div class="nm goldtxt">Біз — бір шаңырақпыз</div><p style="margin:0;color:var(--muted)">Бір уық шаңырақты көтере алмайды, бірақ 22 уық бірге болса, үй берік тұрады.</p></div>
+  </div>
+</section>
+
+<section id="esik" class="room" style="--c:#FF4D5E;--c2:#FF8A00" tabindex="-1">
+  <div class="head"><div class="medal"><svg viewBox="0 0 40 40"><path d="M10 38V10q10-8 20 0v28" fill="none" stroke="#fff" stroke-width="3"/><circle cx="26" cy="24" r="2" fill="#fff"/></svg></div>
+  <div><div class="kick">Есік — күнделікті көмекші</div><h2>Сынып жетекшісінің құралдары</h2></div></div>
+  <p class="lead">Сабақта және тәрбие сағатында пайдаланатын құралдар: кездейсоқ таңдау, топқа бөлу және кезекшілік кестесі.</p>
+  <div class="two">
+    <div class="card wheel"><h3 style="font-size:17px">Кім жауап береді?</h3><div class="bigname goldtxt" id="pick">✦</div><button class="btn" id="pickBtn">Айналдыру</button><span class="ex">Әділ кезек: бір жауап берген оқушы бәрі шыққанша қайталанбайды</span></div>
+    <div class="card"><h3 style="font-size:17px">Топқа бөлу</h3>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;align-items:center"><label for="gn">Топ саны:</label><select id="gn" style="font:inherit;padding:8px;border-radius:12px;border:1px solid var(--g1)"><option>2</option><option>3</option><option selected>4</option><option>5</option><option>6</option></select><button class="btn" id="grpBtn">Бөлу</button></div>
+      <div class="groups" id="groups"></div></div>
+  </div>
+  <div class="card" style="margin-top:16px"><h3 style="font-size:17px;margin-bottom:8px">Апталық кезекшілік кестесі</h3><div class="tw"><table id="duty"></table></div><span class="ex">Кесте тізім бойынша автоматты түрде құрылады</span></div>
+</section>
+
+<section id="sandyq" class="room" style="--c:#FF3EA5;--c2:#B23CFF" tabindex="-1">
+  <div class="head"><div class="medal"><svg viewBox="0 0 40 40"><rect x="5" y="12" width="30" height="22" rx="4" fill="none" stroke="#fff" stroke-width="3"/><path d="M5 19h30" stroke="#fff" stroke-width="3"/><circle cx="20" cy="26" r="2.5" fill="#fff"/></svg></div>
+  <div><div class="kick">Сандық — ең қымбат қазына</div><h2>Туған күндер күнтізбесі</h2></div></div>
+  <p class="lead">Әр баланың туған күні — бүкіл сыныптың мерекесі. Бұл айдың мерейтойлары алтынмен белгіленеді.</p>
+  <div class="grid" id="bdays" style="grid-template-columns:repeat(auto-fill,minmax(160px,1fr))"></div>
+</section>
+
+<section id="tor" class="room" style="--c:#8B5CF6;--c2:#5B3CF0" tabindex="-1">
+  <div class="head"><div class="medal"><svg viewBox="0 0 40 40"><path d="M20 4l5 10 11 2-8 8 2 11-10-5-10 5 2-11-8-8 11-2z" fill="#fff"/></svg></div>
+  <div><div class="kick">Төр — ең құрметті орын</div><h2>Сыныптың жетістіктері</h2></div></div>
+  <p class="lead">Жетістіктер жинала береді. Әр жаңа диплом осы жерге қосылады.</p>
+  <div class="grid" id="wins"></div>
+  <p class="ex">Жаңа диплом келген сайын осы тізімге қосылады.</p>
+</section>
+
+<section id="baskur" class="room" style="--c:#10B981;--c2:#0EA5A4" tabindex="-1">
+  <div class="head"><div class="medal"><svg viewBox="0 0 40 40"><path d="M4 20q4-8 8 0t8 0t8 0t8 0" fill="none" stroke="#fff" stroke-width="3"/></svg></div>
+  <div><div class="kick">Баскұр — бәрін байлайтын алтын бау</div><h2>«Адал азамат»: біздің құндылықтар</h2></div></div>
+  <p class="lead">Тәрбие жұмысы «Адал азамат» біртұтас тәрбие бағдарламасы бойынша жүргізіледі (ҚР Оқу-ағарту министрінің 2025 жылғы 26 мамырдағы № 123 бұйрығы). Қағидасы: <b>«Адал азамат — адал еңбек — адал табыс»</b>.</p>
+  <div class="grid" id="values"></div>
+  <div class="card" style="margin-top:14px"><b class="goldtxt" style="font-family:var(--display)">«Өнегелі 15 минут»</b> — аптасына бір рет сыныппен бірге бір өнегелі әңгіме немесе мақалды талқылаймыз. Осы аптаның тақырыбы: <b>«Еңбек түбі — береке»</b>.</div>
+</section>
+
+<section id="zhoba" class="room" style="--c:#2F80FF;--c2:#00B8D9" tabindex="-1">
+  <div class="head"><div class="medal"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="13" fill="none" stroke="#fff" stroke-width="3"/><path d="M20 11v18M11 20h18" stroke="#fff" stroke-width="3"/></svg></div>
+  <div><div class="kick">Тәрбие жобалары</div><h2>Біздің сыныптың жобалары</h2></div></div>
+  <div class="grid" id="projects"></div>
+</section>
+
+<section id="qalqan" class="room" style="--c:#5B5BF0;--c2:#2F80FF" tabindex="-1">
+  <div class="head"><div class="medal"><svg viewBox="0 0 40 40"><path d="M20 4l13 5v9c0 9-6 15-13 18C13 33 7 27 7 18V9z" fill="none" stroke="#fff" stroke-width="3"/><path d="M14 20l4 4 8-8" fill="none" stroke="#fff" stroke-width="3"/></svg></div>
+  <div><div class="kick">Қалқан — қауіпсіз шаңырақ</div><h2>Қауіпсіздік және достық</h2></div></div>
+  <div class="two">
+    <div class="card"><h3 style="font-size:17px">Интернеттегі 5 алтын ереже</h3><ol style="margin:8px 0 0;padding-left:20px">
+      <li>Құпия сөзімді ата-анамнан басқа ешкімге айтпаймын.</li><li>Мекенжайымды, мектебімді, суретімді бейтаныс адамға жібермеймін.</li><li>Бейтаныс сілтемені баспаймын, алдымен ересектен сұраймын.</li><li>Біреу ренжітсе, үндемей қалмай, ата-анама немесе мұғалімге айтамын.</li><li>Экран уақытын отбасымен бірге келістіреміз.</li></ol></div>
+    <div class="card"><h3 style="font-size:17px">Біздің достық ережеміз</h3><ul style="margin:8px 0 0;padding-left:20px">
+      <li>Бір-бірімізді атымен атаймыз, мазақтамаймыз.</li><li>Жалғыз қалған досты ойынға шақырамыз.</li><li>Ренжісек, «Кешірім шеңберінде» сөйлесеміз.</li><li>Буллингті көрсем, көмекке шақырамын: бұл — батылдық.</li></ul>
+      <p class="note" style="margin-top:10px">Көмек керек болса: <b>150</b> — балалар мен жастарға арналған ұлттық сенім телефоны (тегін, WhatsApp: +7 708 106 08 10); <b>111</b> — отбасы, әйелдер және балалар құқығын қорғау бойынша бірыңғай байланыс орталығы (тәулік бойы).</p></div>
+  </div>
+</section>
+
+<section id="kerege" class="room" style="--c:#FF7A00;--c2:#FF4D5E" tabindex="-1">
+  <div class="head"><div class="medal"><svg viewBox="0 0 40 40"><path d="M4 8l32 24M14 8l22 17M4 18l18 14M36 8L4 32M26 8L4 25M36 18L18 32" stroke="#fff" stroke-width="2.5"/></svg></div>
+  <div><div class="kick">Кереге — мектеп пен отбасының берік байланысы</div><h2>Ата-ана мектебі</h2></div></div>
+  <div class="card" style="margin-bottom:14px"><h3 style="font-size:17px;margin-bottom:10px">Жылдық 8 кездесу: ата-аналарға педагогикалық қолдау</h3><div class="grid" id="parents" style="grid-template-columns:repeat(auto-fill,minmax(200px,1fr))"></div></div>
+  <details open><summary>Экран уақыты: отбасылық ереже жасаңыз</summary><p>Баламен бірге «қашан, қанша, қай жерде» деген ереже жазып, көрінетін жерге іліңіз. Баланың өзі қатысқан ережені орындау жеңіл.</p></details>
+  <details><summary>Баланы қалай мақтаймыз?</summary><p>«Сен ақылдысың» емес, «Сен көп еңбектендің, сондықтан шықты» деп мақтаңыз.</p></details>
+  <details><summary>4-сыныптан 5-сыныпқа: қалай дайындаламыз?</summary><p>Баланы дербес жұмысқа баулыңыз: сөмкесін өзі жинасын, күнделігін өзі толтырсын, сабақ кестесін өзі бақыласын.</p></details>
+  <details><summary>Кешкі 10 минут әңгіме</summary><p>«Бүгін не қызық болды?», «Не қиын болды?», «Кімге көмектестің?» деген үш сұрақ баланы ашылуға көмектеседі.</p></details>
+</section>
+
+<section id="oyyn" class="room" style="--c:#D946EF;--c2:#FF3EA5" tabindex="-1">
+  <div class="head"><div class="medal"><svg viewBox="0 0 40 40"><text x="20" y="28" font-size="24" text-anchor="middle" fill="#fff" font-family="Unbounded">?</text></svg></div>
+  <div><div class="kick">Текемет — ойын алаңы</div><h2>Дұрыс па, жалған ба?</h2></div></div>
+  <div class="card"><span class="pill" id="fqn">1 / 6</span><div class="q" id="fq"></div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn" id="fT">Дұрыс</button><button class="btn ghost" id="fF">Жалған</button><button class="btn ghost" id="fN" hidden>Келесі →</button></div>
+    <div class="res" id="fr">Таңда да, неге солай ойлайтыныңды айт.</div></div>
+</section>
+
+<section id="agash" class="room" style="--c:#22C55E;--c2:#84CC16" tabindex="-1">
+  <div class="head"><div class="medal"><svg viewBox="0 0 40 40"><path d="M20 36V18" stroke="#fff" stroke-width="3"/><circle cx="20" cy="14" r="10" fill="none" stroke="#fff" stroke-width="3"/></svg></div>
+  <div><div class="kick">Бәйтерек — жақсылықтың белгісі</div><h2>Жақсылық ағашы</h2></div></div>
+  <div class="two">
+    <div class="treebox"><canvas id="tree" width="700" height="340" aria-label="Алтын жапырақты жақсылық ағашы"></canvas><div class="cnt" id="tc"></div></div>
+    <div class="card"><h3 style="font-size:17px">Соңғы жақсы істер</h3><ul id="deeds" style="margin:8px 0 0;padding-left:18px"></ul><span class="ex">Мысал ретінде толтырылған</span></div>
+  </div>
+</section>
+
+<section id="bailanys" class="room" style="--c:#E11D48;--c2:#FF3EA5" tabindex="-1">
+  <div class="head"><div class="medal"><svg viewBox="0 0 40 40"><rect x="6" y="10" width="28" height="20" rx="4" fill="none" stroke="#fff" stroke-width="3"/><path d="M7 12l13 10 13-10" fill="none" stroke="#fff" stroke-width="3"/></svg></div>
+  <div><div class="kick">Хат — шаңырақтың үні</div><h2>Кері байланыс</h2></div></div>
+  <p class="lead">Ата-ана мен оқушы ұстазға бір минутта ой айта алады. Хат WhatsApp арқылы жетеді, ал ұстаз оны журналға қосып, сыныптың «тынысын» бақылайды.</p>
+  <div class="tabs" role="tablist">
+    <button role="tab" class="tab on" data-t="tp" aria-selected="true">Ата-анаға</button>
+    <button role="tab" class="tab" data-t="ts" aria-selected="false">Оқушыға</button>
+    <button role="tab" class="tab" data-t="tt" aria-selected="false">Ұстазға · журнал</button>
+  </div>
+
+  <div class="tpane on" id="tp">
+    <div class="two">
+      <div class="card">
+        <label class="lb" for="pKid">Балаңыздың аты</label>
+        <select id="pKid" class="inp"></select>
+        <div class="lb">Хаттың түрі</div>
+        <div class="chipset" id="pType"></div>
+        <div class="lb">Сыныптағы ахуал сізге қалай? <span class="ex">(1–5)</span></div>
+        <div class="stars" id="pStars"></div>
+        <label class="lb" for="pMsg">Хат</label>
+        <textarea id="pMsg" class="inp" rows="4" maxlength="800" placeholder="Мысалы: Бала үйде жобасы туралы көп айтады. Келесі жиналыста экран уақыты туралы сөйлессек..."></textarea>
+      </div>
+      <div class="card prev">
+        <div class="lb">Ұстазға жететін хат</div>
+        <pre id="pPrev" class="msg"></pre>
+        <div class="row"><a class="btn wa" id="pWa" target="_blank" rel="noopener">WhatsApp арқылы жіберу</a><button class="btn ghost" id="pCp">Көшіру</button></div>
+        <p class="ex" style="margin:8px 0 0">WhatsApp ашылғанда ұстаздың немесе сынып чатын таңдаңыз. Ата-ана жиналысының 8 тақырыбы «Кереге» кабинетінде.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="tpane" id="ts">
+    <div class="two">
+      <div class="card">
+        <div class="lb">Бүгін өзіңді қалай сезіндің?</div>
+        <div class="moods" id="sMood"></div>
+        <div class="lb">Бүгін маған ұнағаны</div>
+        <div class="chipset" id="sLike"></div>
+        <label class="lb" for="sHelp">Маған көмек керек / ұстазға айтқым келеді</label>
+        <textarea id="sHelp" class="inp" rows="3" maxlength="400" placeholder="Қаласаң, жаз. Бұл тек ұстазға жетеді."></textarea>
+        <label class="lb" for="sKid">Атың <span class="ex">(міндетті емес)</span></label>
+        <select id="sKid" class="inp"></select>
+      </div>
+      <div class="card prev">
+        <div class="lb">«Шаңырақ жәшігі»</div>
+        <pre id="sPrev" class="msg"></pre>
+        <div class="row"><button class="btn" id="sBox" hidden>Жәшікке салу</button><a class="btn wa" id="sWa" target="_blank" rel="noopener">Ата-анаммен WhatsApp-қа</a><button class="btn ghost" id="sCp">Көшіру</button></div>
+        <p class="ex" id="sNote" style="margin:8px 0 0">Сабақтан соң сынып тақтасында әр оқушы бір басып өтеді (exit ticket). Үйде ата-ана телефонынан жіберуге болады.</p>
+        <div class="res" id="sRes" hidden></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tpane" id="tt">
+    <div id="tLock" class="note">Журнал тек ұстазға ашылады: сайтты өз аккаунтыңызбен (иесі не редакторы ретінде) ашыңыз. Ата-ана мен оқушы хаттары WhatsApp арқылы келеді.</div>
+    <div id="tPanel" hidden>
+      <div class="kpis" id="tKpi"></div>
+      <div class="two" style="margin-top:14px">
+        <div class="card"><h3 style="font-size:16px;margin:0 0 8px">Сынып көңіл-күйі <span class="ex" id="tMonthLbl"></span></h3><div id="tMoodBars"></div><p class="ex" style="margin:8px 0 0">Көк жолақ — бүгін, бозғылт — осы ай</p></div>
+        <div class="card"><h3 style="font-size:16px;margin:0 0 8px">Келген хатты журналға қосу</h3>
+          <textarea id="tPaste" class="inp" rows="5" placeholder="WhatsApp-тан келген хатты осында қойыңыз — өрістер өзі танылады"></textarea>
+          <div class="row" style="margin-top:8px"><button class="btn" id="tAdd">Журналға қосу</button></div>
+          <div class="res" id="tRes" hidden></div></div>
+      </div>
+      <div class="card" style="margin-top:14px"><div class="row" style="justify-content:space-between;align-items:center"><h3 style="font-size:16px;margin:0">Хаттар журналы</h3>
+        <select id="tFilter" class="inp" style="width:auto;margin:0"><option value="">Барлығы</option><option>Алғыс</option><option>Ұсыныс</option><option>Сұрақ</option><option>Алаңдаушылық</option><option>Оқушы</option><option value="open">Жауап күтуде</option></select></div>
+        <div id="tList" class="flist"></div>
+        <div class="row" style="margin-top:10px"><button class="btn ghost" id="tSum">Айлық қорытындыны көшіру</button></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="ereje" class="room" style="--c:#C2410C;--c2:#F59E0B" tabindex="-1">
+  <div class="head"><div class="medal"><svg viewBox="0 0 40 40"><rect x="9" y="6" width="22" height="28" rx="3" fill="none" stroke="#fff" stroke-width="3"/><path d="M14 14h12M14 20h12M14 26h8" stroke="#fff" stroke-width="3"/></svg></div>
+  <div><div class="kick">Кебеже — бәрі өз орнында</div><h2>Сынып жетекшісінің ережесі — киіз үйде</h2></div></div>
+  <p class="lead">Негізі: «Орта білім беру ұйымдарында сынып жетекшілігі туралы ереже» (ҚР БҒМ 2016 жылғы 12 қаңтардағы № 18 бұйрығы, 2025 жылғы 30 сәуірдегі өзгерістерімен). Ереженің әр міндеті киіз үйдің бір бөлігінде орындалады — батырманы басып, сол кабинетке өтіңіз.</p>
+  <div class="card" style="margin-bottom:14px"><h3 style="font-size:17px;margin:0 0 4px">Мақсаты (7-тармақ)</h3><p style="margin:0">Баланың жан-жақты дамуы, тұлғаны қалыптастыру, ата-анамен өзара әрекет және оларды оқу-тәрбие процесіне тарту.</p></div>
+  <h3 style="font-size:18px;margin:6px 0 10px">Негізгі міндеттер (8-тармақ) → киіз үйдегі орны</h3>
+  <div class="grid" id="tasks"></div>
+  <h3 style="font-size:18px;margin:20px 0 10px">Функциялары (9-тармақ)</h3>
+  <div class="grid" id="funcs"></div>
+  <div class="note" style="margin-top:14px">Жұмыс түрлері: жеке, топтық, ұжымдық (10-тармақ). Қашықтан оқыту кезінде — ата-ананы хабардар ету және кері байланыс (11-тармақ): «Дастархан» кабинеті. Жоспарлау мен бақылауды тәрбие ісі жөніндегі орынбасар жүзеге асырады (6-тармақ).</div>
+</section>
+</main>
+<div class="orn" aria-hidden="true"></div>
+<footer>Астана қаласы әкімдігінің «№109 жалпы орта білім беретін мектеп» КММ · 4 «В» сынып · 2026–2027 оқу жылы</footer>
+
+<script>
+(function(){
+const $=s=>document.querySelector(s);
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+/* ===== ДЕРЕКТЕР ===== */
+// [аты, тегінің бас әрпі, туған күн (күн.ай), жынысы]
+const KIDS=[['Алина','А','13.03','қ'],['Рахматұлла','А','04.06','ұ'],['Кәусар','А','23.01','қ'],['Мейрамбек','Е','09.05','ұ'],['Әли','Е','11.04','ұ'],['Дария','Е','02.04','қ'],['Ақжарқын','Е','01.12','қ'],['Көркем','Ж','21.01','қ'],['Ануар','Ж','23.06','ұ'],['Медина','Ж','10.10','қ'],['Нұрасыл','Ж','29.12','ұ'],['Ахмад','И','09.06','ұ'],['Айару','К','19.03','қ'],['Нұрым','М','05.09','ұ'],['Ақнұр','Н','04.08','қ'],['Ибрахим','Н','23.06','ұ'],['Адия','О','05.09','қ'],['Мұстафа','С','02.02','ұ'],['Жангелді','С','14.01','ұ'],['Ясина','С','29.10','қ'],['Аянат','Т','03.07','қ'],['Али','Т','13.03','ұ']];
+const WINS={
+ 'Аянат':['«Шың» олимпиадасы («Астана дарыны»): жаратылыстану — II дәреже','«Шың» олимпиадасы («Астана дарыны»): қазақ тілі — II дәреже'],
+ 'Адия':['«Бала Абай» қалалық байқауы, «Өлең — сөздің патшасы» номинациясы — III дәреже']};
+const VALUES=[['Тәуелсіздік және отаншылдық','Туған жерімді, тілімді, рәміздерімді құрметтеймін.'],['Бірлік және ынтымақ','Сыныбымыз — бір шаңырақ.'],['Әділдік және жауапкершілік','Уәдемде тұрамын, ісіме жауап беремін.'],['Заң және тәртіп','Сынып ережесін бірге жазып, бірге орындаймыз.'],['Еңбекқорлық және кәсіби біліктілік','Адал еңбекпен жеткен табыс қуантады.'],['Жасампаздық және жаңашылдық','Жаңа нәрсе ойлап табудан қорықпаймын.']];
+const PROJECTS=[['Қамқор','Экология және волонтерлік','Құстарға жемсауыт, ардагерлерге хат, ауланы көгалдандыру'],['Еңбегі адал — жас өрен','Еңбекке баулу','«Ата-ана сабағы»: ата-аналар өз мамандығын таныстырады'],['Smart Bala','Зияткерлік даму','Логикалық ойындар, тоғызқұмалақ'],['Шабыт','Шығармашылық','Сынып театры, сурет көрмесі, ұлттық ою'],['Ұшқыр ой алаңы','Сыни ойлау','«Дұрыс па, жалған ба?», сынып жиналысы'],['Балалар кітапханасы','Оқуға құштарлық','Аптасына бір кітап, отбасылық оқу кеші']];
+const PARENTS=['Қыркүйек|Жаңа оқу жылы — ортақ мақсаттар','Қазан|Баланың күн тәртібі мен ұйқысы','Қараша|Экран уақыты және цифрлық қауіпсіздік','Желтоқсан|Отбасылық құндылықтар мен дәстүрлер','Қаңтар|Мақтау мен шектеу: қалай теңестіреміз?','Ақпан|Буллингтің алдын алу','Наурыз|Кітап оқуға баулу','Сәуір|5-сыныпқа көшуге дайындық'];
+const FACTS=[['Түйеқұс қорыққанда басын құмға тығады.',false,'Бұл — аңыз. Түйеқұс жұмыртқасын аудару үшін басын жерге еңкейтеді.'],['Қазақстан — мұхитқа шығатын жолы жоқ елдердің ішіндегі ең үлкені.',true,'Дұрыс! Аумағы жағынан мұндай елдердің ішінде бірінші орында.'],['Интернетте жазылғанның бәрі — шындық.',false,'Жоқ! Кім жазғанын, қайда жарияланғанын тексеру керек.'],['Киіз үйді бірнеше сағатта жинап, қайта тігуге болады.',true,'Дұрыс. Көшпенділер оны тез жинап, көшкенде бірге алып жүрген.'],['Жарнамада «ең жақсы» десе, ол міндетті түрде ең жақсы.',false,'Жарнама сатуға арналған. Салыстырып барып шешу керек.'],['Адам денесінің жартысынан көбі судан тұрады.',true,'Дұрыс, балалардың денесінде су тіпті көбірек.']];
+const DEEDS=['Кітапханаға кітап сыйладық','Ардагер атамызға хат жаздық','Құстарға жемсауыт жасадық','1-сыныпқа ертегі оқып бердік','Аулада гүл ектік'];
+/* ==================== */
+const N=KIDS.length, nm=k=>k[0]+' '+k[1]+'.';
+const ROOMS=[["shanyraq", "#F5A300", "#FF7A00", "Шаңырақ", "ұстаз"], ["uyq", "#00B8D9", "#0077FF", "Уықтар", "оқушылар"], ["esik", "#FF4D5E", "#FF8A00", "Асадал", "құралдар"], ["sandyq", "#FF3EA5", "#B23CFF", "Сандық", "туған күндер"], ["tor", "#8B5CF6", "#5B3CF0", "Төр", "жетістіктер"], ["baskur", "#10B981", "#0EA5A4", "Баскұр", "құндылықтар"], ["zhoba", "#2F80FF", "#00B8D9", "Жобалар", "«Адал азамат»"], ["qalqan", "#5B5BF0", "#2F80FF", "Қалқан", "қауіпсіздік"], ["kerege", "#FF7A00", "#FF4D5E", "Кереге", "ата-ана"], ["oyyn", "#D946EF", "#FF3EA5", "Ойын", "ойлан, тап"], ["agash", "#22C55E", "#84CC16", "Жақсылық ағашы", "игі істер"], ["bailanys", "#E11D48", "#FF3EA5", "Дастархан", "кері байланыс"], ["ereje", "#C2410C", "#F59E0B", "Кебеже", "ереже · жоспар"]];
+const ICON={shanyraq:'☀',uyq:'✺',esik:'⚑',sandyq:'✿',tor:'★',baskur:'❖',zhoba:'✦',qalqan:'⛨',kerege:'♥',oyyn:'?',agash:'❦',bailanys:'✉',ereje:'§'};
+let cur=-1,lastEl=null;
+function openRoom(k,ev,push=true){if(k==='enter'){enterYurt(push);return}if(k==='ishi'){showInside(false);return}const i=ROOMS.findIndex(r=>r[0]===k);if(i<0)return;const [_,a,b,t,d]=ROOMS[i];
+ document.querySelectorAll('section.room.open').forEach(x=>x.classList.remove('open'));
+ const sec=document.getElementById(k);
+ if(ev&&ev.clientX){sec.style.setProperty('--ox',ev.clientX+'px');sec.style.setProperty('--oy',ev.clientY+'px')}else{sec.style.setProperty('--ox','50%');sec.style.setProperty('--oy','40%')}
+ sec.classList.add('open');sec.scrollTop=0;cur=i;
+ const bar=$('#bar');bar.style.setProperty('--c',a);bar.style.setProperty('--c2',b);bar.classList.add('on');
+ $('#ttl').innerHTML=`${t}<small>${i+1}-кабинет · ${d}</small>`;document.body.classList.add('inroom');
+ if(push&&location.hash!=='#'+k)history.pushState({k},'','#'+k);
+ setTimeout(()=>sec.focus({preventScroll:true}),30)}
+let inside=false;
+function showInside(anim){const el=$('#inside3');el.hidden=false;el.classList.toggle('show',!!anim);inside=true;document.body.classList.add('inroom');fitTags()}
+function enterYurt(push=true){if(inside)return;const h=$('#home3d');if(reduce){showInside(false)}else{h.classList.add('enter');setTimeout(()=>{showInside(true);h.classList.remove('enter')},1250)}if(push)history.pushState({},'','#ishi');setTimeout(()=>$('#goOut').focus({preventScroll:true}),1000)}
+function exitYurt(push=true){if(!inside)return;$('#inside3').hidden=true;inside=false;document.body.classList.remove('inroom');if(push)history.pushState({},'',location.pathname+location.search)}
+function closeRoom(push=true){document.querySelectorAll('section.room.open').forEach(x=>x.classList.remove('open'));$('#bar').classList.remove('on');if(!inside)document.body.classList.remove('inroom');cur=-1;
+ if(push)history.pushState({},'',inside?'#ishi':location.pathname+location.search);if(lastEl)lastEl.focus({preventScroll:true})}
+const goEl=el=>e=>{lastEl=el;openRoom(el.dataset.go,e)};
+document.querySelectorAll(':is(#home3d,#in3d) .hot').forEach(g=>{g.onclick=goEl(g);if(g.tagName!=='BUTTON')g.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();lastEl=g;openRoom(g.dataset.go)}}});
+$('#home').onclick=()=>closeRoom();
+document.querySelectorAll(':is(#home3d,#in3d) .hot').forEach(g=>{const k=g.dataset.go,on=v=>document.querySelectorAll(`:is(#home3d,#in3d) [data-go="${k}"]`).forEach(x=>x.classList.toggle('lit',v));g.addEventListener('pointerenter',()=>on(true));g.addEventListener('pointerleave',()=>on(false));g.addEventListener('focus',()=>on(true));g.addEventListener('blur',()=>on(false))});
+function fitTags(){const S=innerWidth<640?1.32:1;document.querySelectorAll(':is(#home3d,#in3d) .tag').forEach(g=>{const tt=g.querySelector('.tt'),ts=g.querySelector('.ts'),bx=g.querySelector('.bx'),bc=g.querySelector('.bc'),nu=g.querySelector('.num');
+ const cy=+bc.getAttribute('data-cy')||+bc.getAttribute('cy');bc.setAttribute('data-cy',cy);
+ tt.style.fontSize=21*S+'px';ts.style.fontSize=15*S+'px';nu.style.fontSize=17*S+'px';const h=58*S,r=19*S,pad=29*S;
+ const w=Math.max(tt.getComputedTextLength(),ts.getComputedTextLength())+pad+r+30*S;let x=+g.dataset.x-w/2;x=Math.max(4,Math.min(796-w,x));
+ bx.setAttribute('x',x);bx.setAttribute('width',w);bx.setAttribute('height',h);bx.setAttribute('y',cy-h/2);bx.setAttribute('rx',h/2);
+ bc.setAttribute('cx',x+pad);bc.setAttribute('r',r);nu.setAttribute('x',x+pad);tt.setAttribute('x',x+pad+r+8*S);ts.setAttribute('x',x+pad+r+8*S);tt.setAttribute('y',cy-4*S);ts.setAttribute('y',cy+17*S)})}
+addEventListener('resize',fitTags);
+fitTags();if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fitTags);
+if(!reduce&&matchMedia('(pointer:fine)').matches){const st=$('#home3'),sv=$('#home3d');st.addEventListener('pointermove',e=>{const r=st.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;sv.style.transform=`rotateY(${x*10}deg) rotateX(${-y*6}deg)`});st.addEventListener('pointerleave',()=>sv.style.transform='');const s2=$('#inside3'),v2=$('#in3d');s2.addEventListener('pointermove',e=>{const x=e.clientX/innerWidth-.5,y=e.clientY/innerHeight-.5;v2.style.transform=`rotateY(${x*8}deg) rotateX(${-y*5}deg)`});s2.addEventListener('pointerleave',()=>v2.style.transform='')}
+$('#prv').onclick=()=>openRoom(ROOMS[(cur-1+ROOMS.length)%ROOMS.length][0]);
+$('#nxt').onclick=()=>openRoom(ROOMS[(cur+1)%ROOMS.length][0]);
+addEventListener('keydown',e=>{if(e.key==='Escape'){if(cur>=0)closeRoom();else if(inside)exitYurt()}});
+$('#goOut').onclick=()=>exitYurt();
+addEventListener('popstate',()=>{const k=location.hash.slice(1);if(k==='ishi'){if(cur>=0)closeRoom(false);showInside(false)}else if(k&&document.getElementById(k))openRoom(k,null,false);else{if(cur>=0)closeRoom(false);exitYurt(false)}});
+if(location.hash==='#ishi')showInside(false);else if(location.hash&&document.getElementById(location.hash.slice(1)))openRoom(location.hash.slice(1),null,false);
+// top view
+(function(){const PAL=['#FF4D5E','#FF7A00','#F5A300','#10B981','#00B8D9','#8B5CF6'];const c=260,R1=58,R2=200;let s=`<defs><linearGradient id="g2" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#F2CF6B"/><stop offset=".5" stop-color="#C9952A"/><stop offset="1" stop-color="#9A6B0C"/></linearGradient></defs>
+ <circle cx="${c}" cy="${c}" r="${R2+30}" fill="#FFFDF6" stroke="url(#g2)" stroke-width="6"/>
+ <circle cx="${c}" cy="${c}" r="${R2+12}" fill="none" stroke="#F1E2B8" stroke-width="2" stroke-dasharray="4 6"/>`;
+ KIDS.forEach((k,i)=>{const a=-Math.PI/2+i*2*Math.PI/N,x1=c+Math.cos(a)*R1,y1=c+Math.sin(a)*R1,x2=c+Math.cos(a)*R2,y2=c+Math.sin(a)*R2,tx=c+Math.cos(a)*(R2+20),ty=c+Math.sin(a)*(R2+20);
+  const deg=a*180/Math.PI,flip=Math.cos(a)<0;
+  s+=`<g class="ray" data-i="${i}" tabindex="0" role="button" aria-label="${k[0]}"><line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${PAL[i%6]}" stroke-width="5" stroke-linecap="round"/><circle cx="${x2}" cy="${y2}" r="7" fill="${PAL[i%6]}"/>
+   <text x="${tx}" y="${ty}" transform="rotate(${flip?deg+180:deg} ${tx} ${ty})" text-anchor="${flip?'end':'start'}" dominant-baseline="middle">${k[0]}</text></g>`});
+ s+=`<circle cx="${c}" cy="${c}" r="${R1}" fill="url(#g2)"/><circle cx="${c}" cy="${c}" r="${R1-12}" fill="#fff"/><path d="M${c-R1+12} ${c}h${2*R1-24}M${c} ${c-R1+12}v${2*R1-24}M${c-30} ${c-30}l60 60M${c+30} ${c-30}l-60 60" stroke="url(#g2)" stroke-width="4"/>`;
+ $('#topview').innerHTML=s;
+ document.querySelectorAll('.ray').forEach(r=>{const f=()=>{document.querySelectorAll('.ray').forEach(x=>x.classList.remove('on'));r.classList.add('on');const k=KIDS[+r.dataset.i],w=WINS[k[0]]||[];
+  $('#kidcard').innerHTML=`<span class="pill">${+r.dataset.i+1}-уық</span><div class="nm goldtxt">${nm(k)}</div>${w.length?'<ul style="margin:0;padding-left:18px">'+w.map(x=>`<li>${x}</li>`).join('')+'</ul>':'<p style="margin:0;color:var(--muted)">Жетістіктері осы жерге қосылады. Әр бала — шаңырақтың бір тірегі!</p>'}`};r.onclick=f;r.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();f()}}})})();
+// picker
+let pool=[];$('#pickBtn').onclick=()=>{if(!pool.length)pool=KIDS.map((_,i)=>i);let t=0;const steps=reduce?1:18;const iv=setInterval(()=>{const r=KIDS[Math.floor(Math.random()*N)];$('#pick').textContent=nm(r);if(++t>=steps){clearInterval(iv);const j=Math.floor(Math.random()*pool.length),k=KIDS[pool.splice(j,1)[0]];$('#pick').textContent='✦ '+nm(k)+' ✦'}},70)};
+// groups
+$('#grpBtn').onclick=()=>{const g=+$('#gn').value,a=KIDS.map(k=>k).sort(()=>Math.random()-.5);const out=Array.from({length:g},()=>[]);
+ // balance boys/girls
+ const girls=a.filter(k=>k[3]==='қ'),boys=a.filter(k=>k[3]==='ұ');[...girls,...boys].forEach((k,i)=>out[i%g].push(k));
+ $('#groups').innerHTML=out.map((t,i)=>`<div class="card"><h3>${i+1}-топ</h3>${t.map(nm).join('<br>')}</div>`).join('')};
+$('#grpBtn').click();
+// duty: 5 days x pairs
+(function(){const days=['Дүйсенбі','Сейсенбі','Сәрсенбі','Бейсенбі','Жұма'];let w=0;const per=2;let h='<tr><th>Апта</th>'+days.map(d=>`<th>${d}</th>`).join('')+'</tr>';let idx=0;
+ for(w=1;w<=3;w++){h+=`<tr><td><b>${w}-апта</b></td>`+days.map(()=>{const t=[0,1].map(()=>nm(KIDS[(idx++)%N]));return `<td>${t.join('<br>')}</td>`}).join('')+'</tr>'}$('#duty').innerHTML=h})();
+// birthdays by month
+(function(){const M=['Қаңтар','Ақпан','Наурыз','Сәуір','Мамыр','Маусым','Шілде','Тамыз','Қыркүйек','Қазан','Қараша','Желтоқсан'];const now=new Date().getMonth();
+ $('#bdays').innerHTML=M.map((m,i)=>{const ks=KIDS.filter(k=>+k[2].split('.')[1]===i+1).sort((a,b)=>+a[2].split('.')[0]-+b[2].split('.')[0]);
+  return `<div class="month ${i===now?'now':''}"><b>${m}</b><div style="font-size:15px;margin-top:4px">${ks.length?ks.map(k=>`${k[0]} · ${+k[2].split('.')[0]}`).join('<br>'):'<span style="color:#B9A47A">—</span>'}</div></div>`}).join('')})();
+// wins
+const allW=Object.entries(WINS).flatMap(([n,ws])=>ws.map(w=>[n,w]));
+$('#wins').innerHTML=allW.length?allW.map(([n,w])=>`<div class="card"><span class="pill">${n}</span><p style="margin:8px 0 0">${w}</p></div>`).join(''):['Ғылыми жобалар','Олимпиадалар','Шығармашылық','Спорт'].map(t=>`<div class="card" style="text-align:center"><div style="font-size:34px" class="goldtxt">✦</div><h3 style="font-size:16px">${t}</h3><p style="margin:4px 0 0;color:var(--muted)">Дипломдар осында қойылады</p></div>`).join('');
+$('#values').innerHTML=VALUES.map(v=>`<div class="card"><div class="goldtxt" style="font-size:26px">✦</div><h3 style="font-size:16px;margin:4px 0">${v[0]}</h3><p style="margin:0;color:var(--muted)">${v[1]}</p></div>`).join('');
+$('#projects').innerHTML=PROJECTS.map(p=>`<div class="card"><span class="pill">${p[1]}</span><h3 style="font-size:17px;margin:8px 0 4px">«${p[0]}»</h3><p style="margin:0">${p[2]}</p></div>`).join('');
+$('#parents').innerHTML=PARENTS.map((t,i)=>{const [m,x]=t.split('|');return `<div style="background:#FFFDF6;border:1px solid #F1E2B8;border-radius:14px;padding:10px 12px"><b class="goldtxt" style="font-family:var(--display)">${i+1}. ${m}</b><div>${x}</div></div>`}).join('');
+// game
+let fi=0,sc=0;function show(){$('#fqn').textContent=(fi+1)+' / '+FACTS.length;$('#fq').textContent=FACTS[fi][0];$('#fr').className='res';$('#fr').textContent='Таңда да, неге солай ойлайтыныңды айт.';$('#fT').hidden=$('#fF').hidden=false;$('#fN').hidden=true}
+function ans(v){const f=FACTS[fi],ok=v===f[1];if(ok)sc++;$('#fr').className='res '+(ok?'ok':'no');$('#fr').textContent=(ok?'Дұрыс таптың! ':'Қайта ойлан: ')+f[2]+(fi===FACTS.length-1?`  Нәтиже: ${sc} / ${FACTS.length}`:'');$('#fT').hidden=$('#fF').hidden=true;$('#fN').hidden=false;$('#fN').textContent=fi===FACTS.length-1?'Қайта ойнау':'Келесі →'}
+$('#fT').onclick=()=>ans(true);$('#fF').onclick=()=>ans(false);$('#fN').onclick=()=>{fi=fi===FACTS.length-1?0:fi+1;if(!fi)sc=0;show()};show();
+
+// ===== КЕРІ БАЙЛАНЫС =====
+(function(){
+const HEAD='🏠 Біздің шаңырақ · 4 «В» — кері байланыс';
+const TYPES=['Алғыс','Ұсыныс','Сұрақ','Алаңдаушылық'];
+const MOODS=[['😄','Керемет'],['🙂','Жақсы'],['😐','Орташа'],['😟','Мұңды'],['😢','Қиын']];
+const LIKES=['Сабақ','Достарым','Ойын','Жоба','Үзіліс','Кітап','Спорт'];
+const opts=(first)=>`<option value="">${first}</option>`+KIDS.map(k=>`<option>${nm(k)}</option>`).join('');
+$('#pKid').innerHTML=opts('— Жалпы сынып туралы —');$('#sKid').innerHTML=opts('Атымды жазбаймын');
+let pType='Ұсыныс',pStar=0,sMood=-1,sLikes=new Set();
+const chip=(t,on)=>`<button type="button" class="chip" aria-pressed="${on}">${t}</button>`;
+$('#pType').innerHTML=TYPES.map(t=>chip(t,t===pType)).join('');
+$('#pType').onclick=e=>{const b=e.target.closest('.chip');if(!b)return;pType=b.textContent;[...$('#pType').children].forEach(x=>x.setAttribute('aria-pressed',x===b));upd()};
+$('#pStars').innerHTML=[1,2,3,4,5].map(i=>`<button type="button" aria-label="${i} жұлдыз">★</button>`).join('');
+$('#pStars').onclick=e=>{const b=e.target.closest('button');if(!b)return;const i=[...$('#pStars').children].indexOf(b)+1;pStar=pStar===i?0:i;[...$('#pStars').children].forEach((x,j)=>x.classList.toggle('on',j<pStar));upd()};
+$('#sMood').innerHTML=MOODS.map(m=>`<button type="button" aria-pressed="false" aria-label="${m[1]}">${m[0]}<span>${m[1]}</span></button>`).join('');
+$('#sMood').onclick=e=>{const b=e.target.closest('button');if(!b)return;sMood=[...$('#sMood').children].indexOf(b);[...$('#sMood').children].forEach(x=>x.setAttribute('aria-pressed',x===b));upd()};
+$('#sLike').innerHTML=LIKES.map(t=>chip(t,false)).join('');
+$('#sLike').onclick=e=>{const b=e.target.closest('.chip');if(!b)return;const t=b.textContent;sLikes.has(t)?sLikes.delete(t):sLikes.add(t);b.setAttribute('aria-pressed',sLikes.has(t));upd()};
+function pText(){return [HEAD,'Кімнен: Ата-ана',`Оқушы: ${$('#pKid').value||'жалпы сынып'}`,`Тақырып: ${pType}`,pStar?`Сынып ахуалы: ${pStar}/5`:null,`Хат: ${$('#pMsg').value.trim()||'…'}`].filter(Boolean).join('\n')}
+function sText(){return [HEAD,'Кімнен: Оқушы',`Оқушы: ${$('#sKid').value||'аты жазылмаған'}`,sMood>=0?`Көңіл-күй: ${MOODS[sMood][0]} ${MOODS[sMood][1]} (${5-sMood}/5)`:null,sLikes.size?`Ұнағаны: ${[...sLikes].join(', ')}`:null,$('#sHelp').value.trim()?`Хат: ${$('#sHelp').value.trim()}`:null].filter(Boolean).join('\n')}
+function upd(){const p=pText(),s=sText();$('#pPrev').textContent=p;$('#sPrev').textContent=s;$('#pWa').href='https://wa.me/?text='+encodeURIComponent(p);$('#sWa').href='https://wa.me/?text='+encodeURIComponent(s)}
+['#pKid','#pMsg','#sKid','#sHelp'].forEach(id=>$(id).addEventListener('input',upd));upd();
+const copy=(t,btn)=>{const done=()=>{const o=btn.textContent;btn.textContent='Көшірілді ✓';setTimeout(()=>btn.textContent=o,1600)};(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(done).catch(()=>{const a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();try{document.execCommand('copy');done()}catch(e){}a.remove()})};
+$('#pCp').onclick=()=>copy(pText(),$('#pCp'));$('#sCp').onclick=()=>copy(sText(),$('#sCp'));
+// tabs
+document.querySelectorAll('#bailanys .tab').forEach(t=>t.onclick=()=>{document.querySelectorAll('#bailanys .tab').forEach(x=>{x.classList.toggle('on',x===t);x.setAttribute('aria-selected',x===t)});document.querySelectorAll('#bailanys .tpane').forEach(p=>p.classList.toggle('on',p.id===t.dataset.t))});
+// parse pasted message
+function parse(txt){const g=k=>{const m=txt.match(new RegExp('^'+k+':\\s*(.+)$','m'));return m?m[1].trim():''};
+ const from=g('Кімнен')||'Ата-ана',kid=g('Оқушы'),type=from==='Оқушы'?'Оқушы':(TYPES.find(t=>g('Тақырып').startsWith(t))||'Ұсыныс');
+ const st=(g('Сынып ахуалы').match(/(\d)\/5/)||[])[1],md=(g('Көңіл-күй').match(/\((\d)\/5\)/)||[])[1];
+ let msg=g('Хат');if(!msg&&!/Кімнен:/.test(txt))msg=txt.trim();
+ return {from,kid,type,star:st?+st:0,mood:md?+md:0,like:g('Ұнағаны'),msg,ans:false,t:Date.now()}}
+// db (teacher journal)
+const ym=()=>{const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')};
+const ymd=()=>ym()+'-'+String(new Date().getDate()).padStart(2,'0');
+let DB=null,items=[],moodM=[0,0,0,0,0,0],moodD=[0,0,0,0,0,0],writing=Promise.resolve();
+const MF=()=>DB.doc('fb/m-'+ym()),DF=()=>DB.doc('fb/d-'+ymd()),MM=()=>DB.doc('fb/mood-'+ym());
+async function saveItems(next){items=next;render();writing=writing.then(()=>MF().set({items:next})).catch(e=>{$('#tRes').hidden=false;$('#tRes').className='res no';$('#tRes').textContent='Сақталмады: '+(e&&e.code||'қате')})}
+async function addMood(v){moodD[v]++;moodM[v]++;render();writing=writing.then(async()=>{await DF().set({c:moodD.slice()});await MM().set({c:moodM.slice()})})}
+function render(){
+ const n=items.length,open=items.filter(i=>!i.ans).length,stars=items.filter(i=>i.star),avg=stars.length?(stars.reduce((a,i)=>a+i.star,0)/stars.length).toFixed(1):'—';
+ const tm=moodM.reduce((a,b)=>a+b,0),pos=moodM[5]+moodM[4];
+ $('#tKpi').innerHTML=[[n,'хат осы айда'],[open,'жауап күтуде'],[avg,'ата-ана бағасы (1–5)'],[tm?Math.round(pos/tm*100)+'%':'—','оқушылардың жақсы көңіл-күйі']].map(k=>`<div class="kpi"><b>${k[0]}</b><span>${k[1]}</span></div>`).join('');
+ $('#tMonthLbl').textContent='· '+ym();const mx=Math.max(1,...moodM);
+ $('#tMoodBars').innerHTML=MOODS.map((m,i)=>{const v=5-i;return `<div class="mbar"><span style="font-size:22px">${m[0]}</span><div class="tr"><div class="m" style="width:${moodM[v]/mx*100}%"></div><div class="d" style="width:${moodD[v]/mx*100}%"></div></div><b>${moodD[v]}/${moodM[v]}</b></div>`}).join('');
+ const f=$('#tFilter').value,list=items.map((it,i)=>[it,i]).filter(([it])=>!f||(f==='open'?!it.ans:it.type===f)).reverse();
+ $('#tList').innerHTML=list.length?'':'<p class="ex">Әзірге хат жоқ. WhatsApp-тан келген хатты жоғарыға қойыңыз.</p>';
+ list.forEach(([it,i])=>{const d=document.createElement('div');d.className='fi'+(it.ans?' answered':'');
+  d.innerHTML=`<div class="top2"><span class="pill"></span><span></span><span></span><label class="done"><input type="checkbox" ${it.ans?'checked':''}> жауап берілді</label></div><p></p>`;
+  const sp=d.querySelectorAll('.top2 span');sp[0].textContent=it.type;sp[1].textContent=(it.from==='Оқушы'?'Оқушы':'Ата-ана')+(it.kid?' · '+it.kid:'');sp[2].textContent=new Date(it.t).toLocaleDateString('kk-KZ')+(it.star?' · '+'★'.repeat(it.star):'')+(it.mood?' · көңіл-күй '+it.mood+'/5':'');
+  d.querySelector('p').textContent=(it.msg||'')+(it.like?' (Ұнағаны: '+it.like+')':'');
+  d.querySelector('input').onchange=e=>{const nx=items.map((x,j)=>j===i?{...x,ans:e.target.checked}:x);saveItems(nx)};$('#tList').appendChild(d)})}
+$('#tFilter').onchange=render;
+$('#tAdd').onclick=()=>{const t=$('#tPaste').value.trim();if(!t)return;const it=parse(t);const nx=[...items,it];saveItems(nx);if(it.mood)addMood(it.mood);$('#tPaste').value='';$('#tRes').hidden=false;$('#tRes').className='res ok';$('#tRes').textContent=`Қосылды: ${it.type}${it.kid?' · '+it.kid:''}`};
+$('#tSum').onclick=()=>{const c=t=>items.filter(i=>i.type===t).length;const tm=moodM.reduce((a,b)=>a+b,0);
+ copy(`Кері байланыс қорытындысы (${ym()}), 4 «В»\nХат саны: ${items.length} (алғыс ${c('Алғыс')}, ұсыныс ${c('Ұсыныс')}, сұрақ ${c('Сұрақ')}, алаңдаушылық ${c('Алаңдаушылық')}, оқушы ${c('Оқушы')})\nЖауап берілгені: ${items.filter(i=>i.ans).length}\nОқушы көңіл-күйі (барлығы ${tm}): `+MOODS.map((m,i)=>m[0]+' '+moodM[5-i]).join(', '),$('#tSum'))};
+// exit ticket on class board
+$('#sBox').onclick=()=>{if(sMood<0){$('#sRes').hidden=false;$('#sRes').className='res no';$('#sRes').textContent='Алдымен көңіл-күйіңді таңда.';return}
+ const it=parse(sText());addMood(5-sMood);if(it.msg||it.kid)saveItems([...items,it]);
+ $('#sRes').hidden=false;$('#sRes').className='res ok';$('#sRes').textContent='Рақмет! Хатың жәшікке түсті. Келесі оқушы ✦';
+ sMood=-1;sLikes.clear();$('#sHelp').value='';$('#sKid').value='';[...$('#sMood').children,...$('#sLike').children].forEach(x=>x.setAttribute('aria-pressed','false'));upd();setTimeout(()=>$('#sRes').hidden=true,2500)};
+(async()=>{try{if(!window.claude||!claude.use)return;const u=await claude.use('user');const ed=u?await u.canEdit():false;if(!ed)return;
+ const db=await claude.use('db');if(!db)return;DB=db;$('#tLock').hidden=true;$('#tPanel').hidden=false;$('#sBox').hidden=false;$('#sNote').textContent='Сынып тақтасы режимі: оқушы таңдап, «Жәшікке салу» басады — нәтиже журналға түседі.';render();
+ const to=setTimeout(()=>{$('#tRes').hidden=false;$('#tRes').className='res';$('#tRes').textContent='Журнал әлі жүктелмеді — интернетті тексеріңіз.'},10000);
+ MF().onSnapshot(s=>{if(!s.metadata.fromCache)clearTimeout(to);if(s.exists&&!s.metadata.hasPendingWrites)items=(s.data().items||[]).slice();render()},()=>clearTimeout(to));
+ MM().onSnapshot(s=>{if(s.exists&&!s.metadata.hasPendingWrites)moodM=(s.data().c||moodM).slice();render()},()=>{});
+ DF().onSnapshot(s=>{if(s.exists&&!s.metadata.hasPendingWrites)moodD=(s.data().c||moodD).slice();render()},()=>{});
+}catch(e){}})();
+})();
+
+
+// ereje
+(function(){const R=k=>ROOMS.find(r=>r[0]===k);const L=ks=>ks.map(k=>{const r=R(k);return `<button class="tlink" data-to="${k}" style="--tc:${r[1]};--tc2:${r[2]}">${r[3]} →</button>`}).join('');
+const T=[['Салауатты өмір салтына ынталандыру',['qalqan','esik']],['Азаматтық пен патриотизмге, табиғатқа ұқыпты қарауға тәрбиелеу',['baskur','zhoba']],['Отбасылық байланысты нығайту, үлкенді құрметтеу',['kerege']],['Сыныпта достық ахуал мен өзара түсіністік',['uyq','agash']],['Жауапкершілікке, ұжымда жұмыс істеуге тәрбиелеу',['esik','zhoba']],['Оқушылардың тұрмыс жағдайын білу',['bailanys','sandyq']],['Ата-ана жиналысы, кеңес, консилиум, тренинг өткізу',['kerege']],['Үлгерім мен ішкі тәртіп бойынша ата-анамен байланыс',['bailanys','kerege']],['Аптасына бір рет сынып сағатын өткізу',['baskur']],['Басшыны сыныптағы тәрбие жұмысы туралы хабардар ету',['bailanys','tor']]];
+$('#tasks').innerHTML=T.map((t,i)=>`<div class="card"><span class="pill">${i+1}-міндет</span><p style="margin:8px 0 4px;font-weight:600">${t[0]}</p>${L(t[1])}</div>`).join('');
+const F=[['Ұйымдастыру-үйлестіру','Жұмыс жоспары, «мектеп — оқушы — ата-ана» байланысы, № 130 бұйрықпен бекітілген құжаттар',['ereje','kerege']],['Талдау','Оқушылардың жеке ерекшеліктері, сыныптың даму мен үлгерім динамикасы',['uyq','tor']],['Коммуникативтік','Тұлғааралық қарым-қатынас, жайлы психологиялық ахуал, мұғалім—оқушы—ата-ана ынтымағы',['bailanys','agash']],['Бақылау','Үлгерім, сабаққа қатысу, сыртқы келбет және оқушылардың эмоциялық күйі',['bailanys','sandyq']]];
+$('#funcs').innerHTML=F.map(f=>`<div class="card"><h3 style="font-size:16px;margin:0 0 4px">${f[0]}</h3><p style="margin:0 0 4px;color:var(--muted)">${f[1]}</p>${L(f[2])}</div>`).join('');
+document.querySelectorAll('#ereje .tlink').forEach(b=>b.onclick=()=>openRoom(b.dataset.to))})();
+
+// golden tree
+$('#deeds').innerHTML=DEEDS.map(d=>`<li>${d}</li>`).join('');$('#tc').textContent=DEEDS.length+' жақсы іс';
+const cv=$('#tree'),cx=cv.getContext('2d');let seed=5;const rn=()=>(seed=(seed*9301+49297)%233280)/233280;const L=[];
+function br(x,y,len,a,d){const x2=x+Math.cos(a)*len,y2=y-Math.sin(a)*len;const g=cx.createLinearGradient(x,y,x2,y2);g.addColorStop(0,'#B88A2A');g.addColorStop(1,'#E8C96A');cx.strokeStyle=g;cx.lineWidth=Math.max(d*2.3,1.4);cx.lineCap='round';cx.beginPath();cx.moveTo(x,y);cx.lineTo(x2,y2);cx.stroke();if(d<=1){L.push([x2,y2]);return}br(x2,y2,len*.74,a+.38+rn()*.15,d-1);br(x2,y2,len*.74,a-.38-rn()*.15,d-1)}
+const NL=DEEDS.length*6,LC=['#22C55E','#FF3EA5','#F5A300','#00B8D9','#8B5CF6','#FF7A00'];
+function draw(t){cx.clearRect(0,0,700,340);L.length=0;seed=5;br(350,330,90,Math.PI/2,7);const st=L.length/NL;
+ for(let i=0;i<NL;i++){const l=L[Math.floor(i*st)],s=reduce?1:Math.min(1,Math.max(0,(t/40-i)/6));if(!s)continue;cx.fillStyle=LC[i%6];cx.strokeStyle='#C99A2E';cx.lineWidth=1;cx.beginPath();cx.ellipse(l[0],l[1]+Math.sin(t/600+i)*1.5,9*s,6*s,(i%6)*.5,0,7);cx.fill();cx.stroke()}
+ if(!reduce)requestAnimationFrame(draw)}requestAnimationFrame(draw);
+})();
+</script>
+</body>
+</html>
